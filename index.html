@@ -3,155 +3,120 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tunnel 2.0 Smokehouse | Policoro</title>
-    <meta name="description" content="Concept digitale per Tunnel 2.0 Smokehouse a Policoro: BBQ, carni frollate, burger, mix sharing e menu interattivo.">
+    <title>Tunnel 2.0 Smokehouse - Policoro</title>
+    <meta name="description" content="Menu digitale concept per Tunnel 2.0 Smokehouse a Policoro: BBQ, frollatore, burger, contorni e tavolate.">
     <link rel="preload" href="assets/tunnel-logo-official.png" as="image">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="topbar" data-topbar>
+    <header class="site-header">
       <a class="brand" href="#home" aria-label="Tunnel 2.0 Smokehouse">
         <img src="assets/tunnel-logo-official.png" alt="">
         <span>
           <strong>Tunnel 2.0</strong>
-          <small>Smokehouse / Policoro</small>
+          <small>Smokehouse - Policoro</small>
         </span>
       </a>
-      <nav class="nav" aria-label="Navigazione">
+      <nav class="desktop-nav" aria-label="Sezioni">
         <a href="#menu">Menu</a>
-        <a href="#mix">Mix BBQ</a>
-        <a href="#frollatore">Frollatore</a>
+        <a href="#sharing">Tavolate</a>
+        <a href="#carne">Carne</a>
         <a href="#contatti">Contatti</a>
       </nav>
-      <a class="reserve" href="tel:+393773425909">377 342 5909</a>
+      <a class="call-link" href="tel:+393773425909">Prenota</a>
     </header>
 
     <main id="home">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-mark">
-          <img src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">Via Caltanissetta 45, Policoro MT</p>
-          <h1 id="hero-title">Brace, fumo, tagli seri.</h1>
-          <p>
-            Tunnel 2.0 va raccontato come una smokehouse vera: BBQ low &amp; slow, carni dal frollatore,
-            burger spinti e tavolate da condividere.
+      <section class="hero">
+        <div class="hero-content">
+          <p class="kicker">Via Caltanissetta 45 / Policoro MT</p>
+          <h1>Smokehouse, non pub generico.</h1>
+          <p class="hero-text">
+            BBQ americano, carni frollate, burger e dettagli lucani. La pagina deve far venire fame
+            e rendere il menu facile da usare anche dal telefono.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#menu">Apri il menu</a>
-            <a class="btn ghost" href="https://tunnelduepuntozero.it/menu/">Menu ufficiale</a>
+            <a class="button primary" href="#menu">Guarda il menu</a>
+            <a class="button secondary" href="tel:+393773425909">Chiama ora</a>
           </div>
         </div>
-        <aside class="signal-panel" aria-label="Informazioni rapide">
-          <div>
-            <span>Locale</span>
-            <strong>Ristopub / Smokehouse</strong>
-          </div>
-          <div>
-            <span>Google</span>
-            <strong>5,0 su 2 recensioni</strong>
-          </div>
-          <div>
-            <span>Focus</span>
-            <strong>BBQ, frollatore, burger</strong>
-          </div>
+        <aside class="hero-card" aria-label="Dati locale">
+          <img src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
+          <dl>
+            <div><dt>Tipo</dt><dd>Ristopub / Smokehouse</dd></div>
+            <div><dt>Google</dt><dd>5,0 - 2 recensioni</dd></div>
+            <div><dt>Telefono</dt><dd>377 342 5909</dd></div>
+          </dl>
         </aside>
       </section>
 
-      <section class="strip" aria-label="Punti forti">
+      <section class="highlights" aria-label="Punti forti">
         <article>
-          <span>01</span>
-          <strong>Low &amp; slow</strong>
-          <p>Brisket, ribs, salsicce e ali affumicate con legni diversi.</p>
+          <span>BBQ</span>
+          <strong>Brisket, ribs, salsicce, ali.</strong>
         </article>
         <article>
-          <span>02</span>
-          <strong>Frollatore</strong>
-          <p>Rubia Gallega, Chianina IGP, Angus, Masurya, Wagyu A5.</p>
+          <span>Frollatore</span>
+          <strong>Tagli premium scelti al banco.</strong>
         </article>
         <article>
-          <span>03</span>
-          <strong>Lucania</strong>
-          <p>Salsiccia lucana, cruschi, cicoria e vini del territorio.</p>
+          <span>Lucania</span>
+          <strong>Cruschi, cicoria, salsiccia lucana.</strong>
         </article>
       </section>
 
-      <section class="section intro">
-        <p class="eyebrow">Direzione</p>
-        <div class="intro-grid">
-          <h2>Non un elenco. Una scelta guidata.</h2>
-          <p>
-            Il menu deve aiutare il cliente a decidere: cerca, filtra, apre i dettagli, aggiunge una bozza al tavolo.
-            Cosi il prodotto sembra piu premium e il personale ha meno spiegazioni ripetitive da fare.
-          </p>
+      <section class="menu-section" id="menu">
+        <div class="section-title">
+          <p class="kicker">Menu rapido</p>
+          <h2>Filtra. Cerca. Aggiungi.</h2>
         </div>
-      </section>
 
-      <section class="menu-section" id="menu" aria-labelledby="menu-title">
-        <div class="menu-top">
+        <div class="menu-toolbar">
+          <label>
+            <span>Cerca nel menu</span>
+            <input id="searchInput" type="search" placeholder="brisket, burger, cruschi..." autocomplete="off">
+          </label>
+          <label>
+            <span>Categoria</span>
+            <select id="categorySelect"></select>
+          </label>
+        </div>
+
+        <div class="menu-grid">
           <div>
-            <p class="eyebrow">Menu interattivo</p>
-            <h2 id="menu-title">Scegli la fame.</h2>
+            <div class="menu-status" id="menuStatus">Caricamento menu</div>
+            <div class="cards" id="menuCards"></div>
           </div>
-          <div class="menu-tools">
-            <label class="search">
-              <span>Cerca</span>
-              <input id="menuSearch" type="search" placeholder="brisket, smash, cruschi..." autocomplete="off">
-            </label>
-            <label class="select">
-              <span>Ordina</span>
-              <select id="menuSort">
-                <option value="default">Consigliati</option>
-                <option value="price-asc">Prezzo crescente</option>
-                <option value="price-desc">Prezzo alto</option>
-                <option value="name">Nome A-Z</option>
-              </select>
-            </label>
-          </div>
-        </div>
-
-        <div class="menu-layout">
-          <aside class="category-rail" data-categories aria-label="Categorie menu"></aside>
-          <div class="results-wrap">
-            <div class="results-meta">
-              <strong data-result-count>0 piatti</strong>
-              <span data-active-label>Tutto il menu</span>
+          <aside class="ticket" aria-label="Bozza tavolo">
+            <div class="ticket-head">
+              <span>Bozza tavolo</span>
+              <button id="clearTicket" type="button">Svuota</button>
             </div>
-            <div class="menu-results" data-menu-results></div>
-          </div>
-          <aside class="order-panel" aria-label="Bozza tavolo">
-            <div class="order-head">
-              <span>Tavolo</span>
-              <button type="button" data-clear-order>Svuota</button>
+            <div class="ticket-items" id="ticketItems">
+              <p>Seleziona i piatti e controlla il totale indicativo.</p>
             </div>
-            <div class="order-items" data-order-items>
-              <p class="empty">Aggiungi piatti per creare una bozza rapida.</p>
+            <div class="ticket-total">
+              <span>Totale</span>
+              <strong id="ticketTotal">0 EUR</strong>
             </div>
-            <div class="order-total">
-              <span>Totale stimato</span>
-              <strong data-order-total>&euro;0</strong>
-            </div>
-            <a class="btn primary full" href="tel:+393773425909">Chiama e prenota</a>
           </aside>
         </div>
       </section>
 
-      <section class="section mix" id="mix">
-        <p class="eyebrow">American BBQ mixes</p>
-        <div class="mix-head">
-          <h2>La tavolata diventa facile.</h2>
-          <p>Questa e la sezione piu vendibile: nomi chiari, persone consigliate, prezzo leggibile.</p>
+      <section class="sharing" id="sharing">
+        <div class="section-title">
+          <p class="kicker">Tavolate</p>
+          <h2>Mix BBQ facili da scegliere.</h2>
         </div>
-        <div class="mix-grid" data-mix-grid></div>
+        <div class="sharing-grid" id="sharingGrid"></div>
       </section>
 
-      <section class="section frollatore" id="frollatore">
+      <section class="meat" id="carne">
         <div>
-          <p class="eyebrow">Frollatore</p>
-          <h2>La carne va fatta vedere prima ancora di venderla.</h2>
+          <p class="kicker">Frollatore</p>
+          <h2>Qui il valore si vede prima della cottura.</h2>
         </div>
-        <div class="meat-list">
+        <div class="meat-tags">
           <span>Rubia Gallega</span>
           <span>Minhota Portoghese</span>
           <span>Chianina IGP</span>
@@ -162,37 +127,24 @@
         </div>
       </section>
 
-      <section class="section contact" id="contatti">
+      <section class="contact" id="contatti">
         <div>
-          <p class="eyebrow">Contatti</p>
-          <h2>Via Caltanissetta 45.</h2>
+          <p class="kicker">Contatti</p>
+          <h2>Policoro, Via Caltanissetta 45.</h2>
         </div>
-        <div class="contact-card">
+        <div class="contact-links">
           <a href="tel:+393773425909">377 342 5909</a>
           <a href="https://www.google.com/maps/search/?api=1&query=Via%20Caltanissetta%2045%2075025%20Policoro%20MT">Apri Maps</a>
-          <a href="https://tunnelduepuntozero.it/">Sito ufficiale</a>
+          <a href="https://tunnelduepuntozero.it/menu/">Menu ufficiale</a>
         </div>
       </section>
     </main>
 
-    <nav class="mobile-bar" aria-label="Navigazione mobile">
+    <nav class="mobile-nav" aria-label="Azioni rapide">
       <a href="#menu">Menu</a>
-      <a href="#mix">Mix</a>
+      <a href="#sharing">Mix</a>
       <a href="tel:+393773425909">Chiama</a>
     </nav>
-
-    <div class="drawer" data-drawer aria-hidden="true">
-      <button class="drawer-backdrop" type="button" data-close-drawer aria-label="Chiudi dettaglio"></button>
-      <article class="drawer-card" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
-        <button class="drawer-close" type="button" data-close-drawer aria-label="Chiudi">X</button>
-        <span class="pill" data-drawer-category></span>
-        <h3 id="drawerTitle" data-drawer-title></h3>
-        <strong data-drawer-price></strong>
-        <p data-drawer-description></p>
-        <div class="drawer-tags" data-drawer-tags></div>
-        <button class="btn primary full" type="button" data-drawer-add>Aggiungi al tavolo</button>
-      </article>
-    </div>
 
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tunnel 2.0 Smokehouse - Policoro</title>
+    <meta name="description" content="Concept demo per Tunnel 2.0 Smokehouse a Policoro: BBQ, carni frollate, burger e vini.">
+    <link rel="preload" href="assets/hero-smokehouse-interior.png" as="image">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar" data-topbar>
+      <a class="brand" href="#home" aria-label="Tunnel 2.0 Smokehouse">
+        <span class="brand__seal">T2</span>
+        <span class="brand__text">
+          <strong>Tunnel 2.0</strong>
+          <em>Smokehouse</em>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="#bbq">BBQ</a>
+        <a href="#steaks">Frollatore</a>
+        <a href="#burger">Burger</a>
+        <a href="#mix">Mix</a>
+      </nav>
+
+      <a class="topbar__call" href="tel:+393773425909">377 342 5909</a>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero__image" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="kicker">Policoro / Via Caltanissetta 45</p>
+          <h1>Smokehouse con anima lucana.</h1>
+          <p class="hero__lead">
+            BBQ americano, carni frollate in sala, burger seri e bottiglie scelte per reggere la brace.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#menu">Vedi il menu</a>
+            <a class="button button--secondary" href="https://tunnelduepuntozero.it/menu/">Menu attuale</a>
+          </div>
+        </div>
+
+        <div class="hero__ticket" aria-label="Punti forti del locale">
+          <span>Signature</span>
+          <strong>Brisket, ribs e beef ribs affumicate low &amp; slow</strong>
+          <small>Legni aromatici, tagli importanti, servizio guidato.</small>
+        </div>
+      </section>
+
+      <section class="quick-facts" aria-label="Punti chiave">
+        <article>
+          <span>01</span>
+          <strong>Frollatore in sala</strong>
+          <p>La scelta del taglio diventa esperienza, non nota a margine.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>BBQ da condividere</strong>
+          <p>Mix Kentucky, Missouri, Arizona e Texas pensati per tavoli veri.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>Territorio + USA</strong>
+          <p>Salsiccia lucana, peperoni cruschi, Aglianico e smokehouse.</p>
+        </article>
+      </section>
+
+      <section class="statement">
+        <p class="kicker kicker--dark">Direzione</p>
+        <h2>Via il sito verde da template. Dentro ferro, brace, carta e fumo.</h2>
+        <p>
+          Tunnel 2.0 ha gia un'offerta forte. La proposta deve far capire subito che non e' un pub generico:
+          e' un posto dove si sceglie carne, si divide BBQ e si beve bene.
+        </p>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="section-title">
+          <p class="kicker">Menu concept</p>
+          <h2>Piatti reali, raccontati meglio.</h2>
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="Categorie menu">
+          <button class="is-active" type="button" data-filter="all">Tutto</button>
+          <button type="button" data-filter="bbq">BBQ</button>
+          <button type="button" data-filter="steaks">Carni</button>
+          <button type="button" data-filter="burger">Burger</button>
+          <button type="button" data-filter="sides">Contorni</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="dish-card dish-card--feature" id="bbq" data-category="bbq">
+            <div class="dish-card__head">
+              <span>Low &amp; slow</span>
+              <strong>&euro;15</strong>
+            </div>
+            <h3>Brisket Masurya</h3>
+            <p>Punta di petto di scottona, affumicata lentamente con legno di quercia.</p>
+            <small>Da spingere come piatto manifesto.</small>
+          </article>
+
+          <article class="dish-card" data-category="bbq">
+            <div class="dish-card__head">
+              <span>Cherry wood</span>
+              <strong>&euro;15</strong>
+            </div>
+            <h3>Baby Back Ribs</h3>
+            <p>Costine di maiale affumicate al barbecue con patatine fritte.</p>
+          </article>
+
+          <article class="dish-card" data-category="bbq">
+            <div class="dish-card__head">
+              <span>Hickory</span>
+              <strong>&euro;25/35/45</strong>
+            </div>
+            <h3>Beef Ribs</h3>
+            <p>Costine di scottona in tre formati, pensate per chi vuole carne vera.</p>
+          </article>
+
+          <article class="dish-card" data-category="bbq">
+            <div class="dish-card__head">
+              <span>Lucania</span>
+              <strong>&euro;8</strong>
+            </div>
+            <h3>Salsiccia Lucana</h3>
+            <p>Affumicata con ciliegio, contorno semplice, sapore diretto.</p>
+          </article>
+
+          <article class="dish-card" id="steaks" data-category="steaks">
+            <div class="dish-card__head">
+              <span>Dal frollatore</span>
+              <strong>al peso</strong>
+            </div>
+            <h3>Costate e Fiorentine</h3>
+            <p>Rubia Gallega, Minhota, Chianina IGP, Angus, Masurya e Wagyu A5.</p>
+          </article>
+
+          <article class="dish-card" data-category="steaks">
+            <div class="dish-card__head">
+              <span>Crudo</span>
+              <strong>&euro;9</strong>
+            </div>
+            <h3>Tartare</h3>
+            <p>Acciughe del Cantabrico, capperi di Pantelleria, senape e cipolla rossa.</p>
+          </article>
+
+          <article class="dish-card" data-category="steaks">
+            <div class="dish-card__head">
+              <span>Stagionata</span>
+              <strong>&euro;10</strong>
+            </div>
+            <h3>Picanha</h3>
+            <p>Picanha stagionata con nocciole tostate. Poche parole, piatto premium.</p>
+          </article>
+
+          <article class="dish-card" id="burger" data-category="burger">
+            <div class="dish-card__head">
+              <span>Wagyu</span>
+              <strong>&euro;15</strong>
+            </div>
+            <h3>Bacon Crispy 2.0</h3>
+            <p>Hamburger di Wagyu, cheddar, bacon croccante e salsa crispy.</p>
+          </article>
+
+          <article class="dish-card" data-category="burger">
+            <div class="dish-card__head">
+              <span>Smash</span>
+              <strong>&euro;9</strong>
+            </div>
+            <h3>Jam Smash</h3>
+            <p>Doppio patty, cheddar, bacon jam homemade e doppio bacon croccante.</p>
+          </article>
+
+          <article class="dish-card" data-category="burger">
+            <div class="dish-card__head">
+              <span>Smash</span>
+              <strong>&euro;10</strong>
+            </div>
+            <h3>Carbo Smash</h3>
+            <p>Guanciale croccante, doppio patty, pecorino romano e carbocrema.</p>
+          </article>
+
+          <article class="dish-card" data-category="sides">
+            <div class="dish-card__head">
+              <span>Fritti</span>
+              <strong>&euro;7</strong>
+            </div>
+            <h3>Patate cheddar &amp; bacon</h3>
+            <p>La side piu commerciale: semplice, leggibile, perfetta per lo scontrino.</p>
+          </article>
+
+          <article class="dish-card" data-category="sides">
+            <div class="dish-card__head">
+              <span>Locale</span>
+              <strong>&euro;3/6/10</strong>
+            </div>
+            <h3>Peperoni cruschi</h3>
+            <p>Piccolo segnale lucano dentro un menu americano. Va tenuto in evidenza.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mix" id="mix">
+        <div class="section-title section-title--wide">
+          <p class="kicker kicker--dark">American BBQ mixes</p>
+          <h2>La sezione che fa ordinare il tavolo intero.</h2>
+        </div>
+
+        <div class="mix-list">
+          <article>
+            <span>Kentucky</span>
+            <strong>&euro;40</strong>
+            <p>Per 2 persone: ribs, pollo fritto, pulled pork, ali BBQ, chili e patatine.</p>
+          </article>
+          <article>
+            <span>Missouri</span>
+            <strong>&euro;65</strong>
+            <p>Per 3-4 persone: brisket, ribs, salsicce, ali BBQ, pulled pork e chili.</p>
+          </article>
+          <article>
+            <span>Arizona</span>
+            <strong>&euro;75</strong>
+            <p>Per 4-5 persone: beef ribs, brisket, salsicce BBQ, ali, chili e patatine.</p>
+          </article>
+          <article>
+            <span>Texas</span>
+            <strong>&euro;100</strong>
+            <p>Per 5-6 persone: la tavolata completa, pensata per chi non vuole scegliere.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="wine">
+        <div>
+          <p class="kicker">Beer &amp; wine</p>
+          <h2>La carta vini deve diventare guida, non elenco infinito.</h2>
+        </div>
+        <div class="wine__cards">
+          <article>
+            <strong>Carne rossa</strong>
+            <p>Aglianico, Primitivo, Bolgheri, Barolo, Amarone.</p>
+          </article>
+          <article>
+            <strong>BBQ affumicato</strong>
+            <p>Syrah, Malbec, Rodano, rossi con corpo e spezia.</p>
+          </article>
+          <article>
+            <strong>Birre</strong>
+            <p>Krombacher alla spina e lattine artigianali consigliate al banco.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navigazione mobile">
+      <a href="#menu">Menu</a>
+      <a href="#bbq">BBQ</a>
+      <a href="#steaks">Carni</a>
+      <a href="tel:+393773425909">Chiama</a>
+    </nav>
+
+    <footer class="footer">
+      <div>
+        <strong>Tunnel 2.0 Smokehouse</strong>
+        <span>Via Caltanissetta 45, 75025 Policoro MT</span>
+      </div>
+      <a href="https://tunnelduepuntozero.it/">tunnelduepuntozero.it</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

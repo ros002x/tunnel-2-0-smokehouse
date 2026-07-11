@@ -1,158 +1,173 @@
-const dishes = [
-  { name: "Brisket Masurya", category: "BBQ", price: 15, note: "Punta di petto di scottona affumicata con quercia.", featured: true },
-  { name: "Baby Back Ribs", category: "BBQ", price: 15, note: "Costine di maiale affumicate con ciliegio e patatine.", featured: true },
-  { name: "Beef Ribs", category: "BBQ", price: 25, note: "Costine di scottona con hickory. Piccola, media o grande.", featured: true },
-  { name: "Ali di pollo BBQ", category: "BBQ", price: 6, note: "Affumicate con legno di melo, disponibili anche doppie." },
-  { name: "Salsiccia lucana", category: "BBQ", price: 8, note: "Affumicata con ciliegio, servita con patatine." },
-  { name: "Tartare", category: "Antipasti", price: 9, note: "Cantabrico, capperi, senape, cetriolini e cipolla rossa." },
-  { name: "Carpaccio", category: "Antipasti", price: 8, note: "Carpaccio con citronette." },
-  { name: "Picanha stagionata", category: "Antipasti", price: 10, note: "Picanha stagionata con nocciole tostate." },
-  { name: "Selezione dal frollatore", category: "Carni", price: 0, note: "Rubia Gallega, Chianina IGP, Angus, Masurya e Wagyu A5.", featured: true },
-  { name: "Bacon Crispy 2.0", category: "Burger", price: 15, note: "Wagyu, cheddar, bacon croccante e salsa crispy.", featured: true },
-  { name: "Toro Seduto", category: "Burger", price: 13, note: "Angus frollato 30 giorni, rucola, grana, mayo basilico." },
-  { name: "Cheese Smash", category: "Burger", price: 8, note: "Doppio patty, cheddar, cipolla caramellata, bacon e salsa crispy." },
-  { name: "Jam Smash", category: "Burger", price: 9, note: "Doppio patty, cheddar, bacon jam e doppio bacon." },
-  { name: "Carbo Smash", category: "Burger", price: 10, note: "Guanciale, doppio patty, pecorino romano e carbocrema." },
-  { name: "Smoke Pork", category: "Burger", price: 9, note: "Pulled pork e coleslaw." },
-  { name: "Kentucky", category: "Mix BBQ", price: 40, note: "Per 2: ribs, pollo fritto, pulled pork, ali BBQ, chili, patatine.", featured: true },
-  { name: "Missouri", category: "Mix BBQ", price: 65, note: "Per 3-4: brisket, ribs, salsicce, ali BBQ, pulled pork e chili.", featured: true },
-  { name: "Arizona", category: "Mix BBQ", price: 75, note: "Per 4-5: beef ribs, brisket, salsicce BBQ, ali e chili." },
-  { name: "Texas", category: "Mix BBQ", price: 100, note: "Per 5-6: ribs, brisket, pulled pork, salsicce, ali e chili." },
-  { name: "Patate cheddar & bacon", category: "Sides", price: 7, note: "Contorno forte per burger e BBQ." },
-  { name: "Peperoni cruschi", category: "Sides", price: 3, note: "Formato piccolo, medio o grande." },
-  { name: "Coleslaw", category: "Sides", price: 5, note: "Insalata BBQ ideale con pulled pork e ribs." },
-  { name: "Mix verdure grigliate", category: "Sides", price: 5, note: "Verdure grigliate miste." },
-  { name: "Tiramisu", category: "Dolci", price: 4, note: "Classico di fine pasto." },
-  { name: "Cheesecake frutti di bosco", category: "Dolci", price: 4, note: "Fresca dopo BBQ e carni." },
+const sections = [
+  {
+    id: "bbq",
+    label: "BBQ",
+    intro: "Affumicatura, cotture lente e tagli serviti con carattere.",
+    items: [
+      { name: "Brisket Masurya", price: "15 EUR", desc: "Punta di petto di scottona affumicata con legno di quercia.", badge: "scelta smokehouse", featured: true },
+      { name: "Baby Back Ribs", price: "15 EUR", desc: "Costine di maiale affumicate con ciliegio, servite con patatine.", badge: "best seller", featured: true },
+      { name: "Beef Ribs", price: "25 / 35 / 45 EUR", desc: "Costine di scottona affumicate con hickory. Tre formati.", badge: "per veri carnivori", featured: true },
+      { name: "Ali di pollo BBQ", price: "6 / 10 EUR", desc: "Ali affumicate con legno di melo. Singola o doppia porzione." },
+      { name: "Salsiccia lucana", price: "8 EUR", desc: "Salsiccia lucana affumicata con ciliegio, servita con patatine.", badge: "territorio" },
+      { name: "Salsiccia cheddar & bacon", price: "8 EUR", desc: "Versione piu ricca, affumicata e servita con patatine." },
+    ],
+  },
+  {
+    id: "mix",
+    label: "Mix BBQ",
+    intro: "La scelta piu semplice per tavoli che vogliono assaggiare tanto.",
+    items: [
+      { name: "Kentucky", price: "40 EUR", desc: "Consigliato per 2: ribs, pollo fritto, pulled pork, ali BBQ, chili con carne, patatine.", badge: "entry sharing", featured: true },
+      { name: "Missouri", price: "65 EUR", desc: "Per 3-4: brisket, baby back ribs, salsicce, ali BBQ, pulled pork, chili, patatine.", badge: "piu equilibrato", featured: true },
+      { name: "Arizona", price: "75 EUR", desc: "Per 4-5: ribs di vitello, brisket, salsicce BBQ, ali BBQ, chili e patatine." },
+      { name: "Texas", price: "100 EUR", desc: "Per 5-6: ribs di vitello, baby back ribs, brisket, pulled pork, salsicce, ali, chili.", badge: "tavolata completa" },
+    ],
+  },
+  {
+    id: "frollatore",
+    label: "Frollatore",
+    intro: "Tagli selezionati, peso e cottura da scegliere con lo staff.",
+    items: [
+      { name: "Selezione carni", price: "al peso", desc: "Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus, Masurya, Wagyu A5.", badge: "premium", featured: true },
+      { name: "Costate", price: "al peso", desc: "Taglio importante da condividere o scegliere al banco." },
+      { name: "Fiorentine", price: "al peso", desc: "Scelta scenica, ideale per chi vuole vivere il frollatore." },
+    ],
+  },
+  {
+    id: "burger",
+    label: "Burger",
+    intro: "Burger pieni, smash croccanti e panini con identita chiara.",
+    items: [
+      { name: "Bacon Crispy 2.0", price: "15 EUR", desc: "Wagyu, cheddar, bacon croccante, salsa crispy.", badge: "firma 2.0", featured: true },
+      { name: "Toro Seduto", price: "13 EUR", desc: "Angus frollato 30 giorni, mayo basilico, rucola, grana e balsamico." },
+      { name: "Los Pollos Hermanos", price: "8 EUR", desc: "Pollo fritto, lattuga, salsa Alabama, cheddar." },
+      { name: "Cheese Smash", price: "8 EUR", desc: "Doppio patty, cheddar, cipolla caramellata, bacon, salsa crispy." },
+      { name: "Jam Smash", price: "9 EUR", desc: "Doppio patty, cheddar, salsa burger, bacon jam, doppio bacon.", badge: "goloso" },
+      { name: "Carbo Smash", price: "10 EUR", desc: "Guanciale croccante, doppio patty, pecorino romano, carbocrema.", badge: "da provare" },
+      { name: "Smoke Pork", price: "9 EUR", desc: "Pulled pork e coleslaw." },
+      { name: "Come vuoi tu", price: "su richiesta", desc: "Composizione personalizzata." },
+    ],
+  },
+  {
+    id: "antipasti",
+    label: "Antipasti",
+    intro: "Aperture di carne e piccoli piatti prima della brace.",
+    items: [
+      { name: "Tartare", price: "9 EUR", desc: "Acciughe del Cantabrico, capperi Pantelleria, senape, cetriolini, cipolla rossa." },
+      { name: "Carpaccio", price: "8 EUR", desc: "Carpaccio con citronette." },
+      { name: "Polpette al sugo", price: "6 EUR", desc: "Classico caldo e diretto." },
+      { name: "Baltimore Pit Beef", price: "8 EUR", desc: "Salsa tonnata e fior di cappero." },
+      { name: "Picanha stagionata", price: "10 EUR", desc: "Picanha stagionata con nocciole tostate." },
+    ],
+  },
+  {
+    id: "sides",
+    label: "Sides",
+    intro: "Contorni e fritti per completare BBQ, burger e carni.",
+    items: [
+      { name: "Patatine", price: "3 / 5 / 8 EUR", desc: "Small, medium, large." },
+      { name: "Patatine cheddar & bacon", price: "7 EUR", desc: "Side ricco, perfetto con burger e ribs.", badge: "spinta vendita" },
+      { name: "Patatine pulled pork", price: "7 EUR", desc: "Patatine cariche con pulled pork." },
+      { name: "Peperoni cruschi", price: "3 / 6 / 10 EUR", desc: "Il dettaglio lucano da tenere visibile.", badge: "lucano" },
+      { name: "Coleslaw", price: "5 EUR", desc: "Insalata BBQ ideale con pulled pork e ribs." },
+      { name: "Cicoria campestre", price: "4 EUR", desc: "Contorno amaro, territoriale." },
+      { name: "Verdure pastellate", price: "5 EUR", desc: "Fritto vegetale." },
+      { name: "Mix verdure grigliate", price: "5 EUR", desc: "Melanzane, zucchine e verdure alla griglia." },
+    ],
+  },
+  {
+    id: "dolci",
+    label: "Dolci",
+    intro: "Finale semplice, leggibile, prezzo unico.",
+    items: [
+      { name: "Tiramisu", price: "4 EUR", desc: "Classico di fine pasto." },
+      { name: "Cheesecake frutti di bosco", price: "4 EUR", desc: "Fresca e facile dopo BBQ intenso." },
+      { name: "Mousse limone", price: "4 EUR", desc: "Finale leggero." },
+      { name: "Torta Sacher", price: "4 EUR", desc: "Cioccolato, decisa." },
+      { name: "Souffle al cioccolato", price: "4 EUR", desc: "Caldo e goloso." },
+    ],
+  },
 ];
 
-const categories = ["Tutto", ...new Set(dishes.map((dish) => dish.category))];
-const ticket = new Map();
+const tabs = document.getElementById("tabs");
+const list = document.getElementById("menuList");
+const search = document.getElementById("menuSearch");
+const featuredGrid = document.getElementById("featuredGrid");
+let active = "all";
 
-const searchInput = document.getElementById("searchInput");
-const categorySelect = document.getElementById("categorySelect");
-const menuCards = document.getElementById("menuCards");
-const menuStatus = document.getElementById("menuStatus");
-const ticketItems = document.getElementById("ticketItems");
-const ticketTotal = document.getElementById("ticketTotal");
-const clearTicket = document.getElementById("clearTicket");
-const sharingGrid = document.getElementById("sharingGrid");
-
-function money(value) {
-  return value > 0 ? `${value} EUR` : "al peso";
+function allItems() {
+  return sections.flatMap((section) => section.items.map((item) => ({ ...item, section: section.label, sectionId: section.id })));
 }
 
-function renderCategories() {
-  categorySelect.innerHTML = categories
-    .map((category) => `<option value="${category}">${category}</option>`)
-    .join("");
+function itemMarkup(item, compact = false) {
+  return `
+    <article class="menu-card ${item.featured ? "is-featured" : ""}">
+      <div class="item-top">
+        <span>${item.badge || item.section}</span>
+        <strong>${item.price}</strong>
+      </div>
+      <h3>${item.name}</h3>
+      <p>${item.desc}</p>
+      ${compact ? `<small>${item.section}</small>` : ""}
+    </article>
+  `;
 }
 
-function getFilteredDishes() {
-  const query = searchInput.value.trim().toLowerCase();
-  const category = categorySelect.value;
+function renderTabs() {
+  const buttons = [{ id: "all", label: "Tutto" }, ...sections].map((section) => {
+    const label = section.label;
+    const className = active === section.id ? "active" : "";
+    return `<button class="${className}" type="button" data-tab="${section.id}">${label}</button>`;
+  });
+  tabs.innerHTML = buttons.join("");
+}
 
-  return dishes
-    .filter((dish) => category === "Tutto" || dish.category === category)
-    .filter((dish) => {
-      const text = `${dish.name} ${dish.category} ${dish.note}`.toLowerCase();
-      return !query || text.includes(query);
-    })
-    .sort((a, b) => Number(b.featured) - Number(a.featured));
+function renderFeatured() {
+  const featured = allItems().filter((item) => item.featured).slice(0, 6);
+  featuredGrid.innerHTML = featured.map((item) => itemMarkup(item, true)).join("");
 }
 
 function renderMenu() {
-  const visible = getFilteredDishes();
-  menuStatus.textContent = `${visible.length} risultati`;
+  const query = search.value.trim().toLowerCase();
+  const visibleSections = sections
+    .filter((section) => active === "all" || section.id === active)
+    .map((section) => {
+      const items = section.items.filter((item) => {
+        const text = `${item.name} ${item.desc} ${item.badge || ""} ${section.label}`.toLowerCase();
+        return !query || text.includes(query);
+      });
+      return { ...section, items };
+    })
+    .filter((section) => section.items.length > 0);
 
-  if (visible.length === 0) {
-    menuCards.innerHTML = `<p class="empty-state">Nessun piatto trovato. Prova con BBQ, burger o ribs.</p>`;
+  if (visibleSections.length === 0) {
+    list.innerHTML = `<p class="empty">Nessun risultato. Prova con brisket, burger, ribs o smash.</p>`;
     return;
   }
 
-  menuCards.innerHTML = visible.map((dish) => `
-    <article class="dish-card ${dish.featured ? "featured" : ""}">
-      <div class="dish-meta">
-        <span>${dish.category}</span>
-        <strong>${money(dish.price)}</strong>
+  list.innerHTML = visibleSections.map((section) => `
+    <section class="menu-group" id="${section.id}">
+      <div class="group-head">
+        <span>${section.label}</span>
+        <p>${section.intro}</p>
       </div>
-      <h3>${dish.name}</h3>
-      <p>${dish.note}</p>
-      <button type="button" data-add="${dish.name}" ${dish.price === 0 ? "disabled" : ""}>
-        ${dish.price === 0 ? "Chiedi al banco" : "Aggiungi"}
-      </button>
-    </article>
+      <div class="group-items">
+        ${section.items.map((item) => itemMarkup({ ...item, section: section.label })).join("")}
+      </div>
+    </section>
   `).join("");
 }
 
-function renderTicket() {
-  if (ticket.size === 0) {
-    ticketItems.innerHTML = `<p>Seleziona i piatti e controlla il totale indicativo.</p>`;
-    ticketTotal.textContent = "0 EUR";
-    return;
-  }
-
-  let total = 0;
-  ticketItems.innerHTML = Array.from(ticket.entries()).map(([name, qty]) => {
-    const dish = dishes.find((item) => item.name === name);
-    total += dish.price * qty;
-    return `
-      <div class="ticket-row">
-        <span>${dish.name}<small>${qty} x ${money(dish.price)}</small></span>
-        <div>
-          <button type="button" data-minus="${dish.name}">-</button>
-          <strong>${qty}</strong>
-          <button type="button" data-plus="${dish.name}">+</button>
-        </div>
-      </div>
-    `;
-  }).join("");
-  ticketTotal.textContent = money(total);
-}
-
-function addDish(name) {
-  ticket.set(name, (ticket.get(name) || 0) + 1);
-  renderTicket();
-}
-
-function changeDish(name, delta) {
-  const next = (ticket.get(name) || 0) + delta;
-  if (next <= 0) ticket.delete(name);
-  else ticket.set(name, next);
-  renderTicket();
-}
-
-function renderSharing() {
-  const mixes = dishes.filter((dish) => dish.category === "Mix BBQ");
-  sharingGrid.innerHTML = mixes.map((dish) => `
-    <article>
-      <span>${dish.note.split(":")[0]}</span>
-      <h3>${dish.name}</h3>
-      <strong>${money(dish.price)}</strong>
-      <p>${dish.note}</p>
-      <button type="button" data-add="${dish.name}">Aggiungi</button>
-    </article>
-  `).join("");
-}
-
-document.addEventListener("click", (event) => {
-  const addButton = event.target.closest("[data-add]");
-  const minusButton = event.target.closest("[data-minus]");
-  const plusButton = event.target.closest("[data-plus]");
-
-  if (addButton) addDish(addButton.dataset.add);
-  if (minusButton) changeDish(minusButton.dataset.minus, -1);
-  if (plusButton) changeDish(plusButton.dataset.plus, 1);
+tabs.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-tab]");
+  if (!button) return;
+  active = button.dataset.tab;
+  renderTabs();
+  renderMenu();
 });
 
-searchInput.addEventListener("input", renderMenu);
-categorySelect.addEventListener("change", renderMenu);
-clearTicket.addEventListener("click", () => {
-  ticket.clear();
-  renderTicket();
-});
+search.addEventListener("input", renderMenu);
 
-renderCategories();
+renderTabs();
+renderFeatured();
 renderMenu();
-renderTicket();
-renderSharing();

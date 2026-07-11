@@ -1,73 +1,150 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tunnel 2.0 Smokehouse - Menu</title>
-    <meta name="description" content="Menu consultabile per Tunnel 2.0 Smokehouse a Policoro: BBQ, carni frollate, burger, mix da condividere, sides e dolci.">
-    <link rel="preload" href="assets/tunnel-logo-official.png" as="image">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="top">
-      <a class="brand" href="#inizio">
-        <img src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
-        <span>
-          <strong>Tunnel 2.0</strong>
-          <small>Smokehouse / Policoro</small>
-        </span>
-      </a>
-      <a class="phone" href="tel:+393773425909">377 342 5909</a>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b0d08">
+  <meta name="description" content="Menu Tunnel 2.0 Smokehouse a Policoro: BBQ low and slow, frollatore, burger, tavolate, sides e dolci.">
+  <title>Tunnel 2.0 Smokehouse - Menu</title>
+  <link rel="preload" href="assets/tunnel-logo-official.png" as="image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead" id="top">
+    <div class="topline">
+      <span>Policoro MT / Via Caltanissetta 45</span>
+      <a href="tel:+393773425909">Prenota / 377 342 5909</a>
+    </div>
+    <div class="brand-panel">
+      <p class="claim">Smokehouse / Frollatore / Burger</p>
+      <img class="logo" src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
+      <h1>Menu<br><em>Smokehouse</em></h1>
+      <p class="welcome">Cotture lente, carne scelta e piatti da condividere. Parti dalle scelte consigliate oppure vai dritto alla categoria.</p>
+      <a class="down" href="#carta">Apri la carta <span>&darr;</span></a>
+    </div>
+  </header>
 
-    <main id="inizio">
-      <section class="hero">
-        <p class="eyebrow">Via Caltanissetta 45, Policoro MT</p>
-        <h1>Menu Smokehouse</h1>
-        <p>
-          BBQ low &amp; slow, carni dal frollatore, burger e tavolate da condividere.
-          Qui sotto trovi il menu diviso per scelta, cosi il cliente capisce subito cosa sta guardando.
-        </p>
+  <main id="carta">
+    <div class="menu-shell">
+      <section class="intro">
+        <span class="ornament">◆</span>
+        <p>Tunnel 2.0 / Policoro</p>
+        <h2>Prima scegli<br><em>la fame.</em></h2>
+        <p class="intro-copy">Il menu e diviso per esperienza: specialita da spingere, BBQ, frollatore, burger, tavolate e contorni.</p>
       </section>
 
-      <section class="featured" aria-labelledby="featured-title">
-        <div class="section-head">
-          <span>Da spingere</span>
-          <h2 id="featured-title">Le scelte in evidenza</h2>
-          <p>Piatti da mettere davanti al cliente: hanno identita, margine e fanno percepire il locale come smokehouse vera.</p>
-        </div>
-        <div class="featured-grid" id="featuredGrid"></div>
+      <section class="food-showcase" aria-label="Specialita Tunnel 2.0">
+        <figure class="showcase-main">
+          <img src="assets/menu/pork-ribs.jpg" alt="Ribs affumicate Tunnel 2.0" loading="lazy">
+          <figcaption><span>Low and slow</span><b>Ribs affumicate</b></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/menu/bacon-crispy.jpg" alt="Burger Bacon Crispy Tunnel 2.0" loading="lazy">
+          <figcaption><span>Firma 2.0</span><b>Bacon Crispy</b></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/menu/patatine-bacon.jpg" alt="Patatine cheddar e bacon Tunnel 2.0" loading="lazy">
+          <figcaption><span>Side da spingere</span><b>Cheddar & bacon</b></figcaption>
+        </figure>
       </section>
 
-      <section class="menu" id="menu">
-        <div class="menu-tools">
-          <label>
-            <span>Cerca nel menu</span>
-            <input id="menuSearch" type="search" placeholder="brisket, ribs, smash, cruschi..." autocomplete="off">
-          </label>
-          <nav class="tabs" id="tabs" aria-label="Categorie menu"></nav>
-        </div>
-        <div class="menu-list" id="menuList"></div>
-      </section>
+      <nav class="category-nav" id="indice" aria-label="Categorie menu">
+        <a href="#evidenza">In evidenza</a>
+        <a href="#bbq">BBQ</a>
+        <a href="#frollatore">Frollatore</a>
+        <a href="#mix">Mix BBQ</a>
+        <a href="#burger">Burger</a>
+        <a href="#antipasti">Antipasti</a>
+        <a href="#sides">Sides</a>
+        <a href="#dolci">Dolci</a>
+      </nav>
 
-      <section class="info">
-        <article>
-          <span>Frollatore</span>
-          <p>Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus irlandese/spagnolo, Masurya, Wagyu A5.</p>
+      <section class="menu-section" id="evidenza">
+        <header class="section-title"><span>La chance giusta</span><h2>Da mettere davanti</h2><i></i></header>
+        <article class="hero-product">
+          <img src="assets/menu/pork-ribs.jpg" alt="Baby Back Ribs Tunnel 2.0" loading="lazy">
+          <div>
+            <span>Best seller smokehouse</span>
+            <h3>Baby Back Ribs</h3>
+            <p>Costine affumicate con ciliegio. Sono immediate, sceniche e raccontano subito il locale.</p>
+          </div>
+          <strong>15<small>EUR</small></strong>
         </article>
-        <article>
-          <span>Contatti</span>
-          <p><a href="tel:+393773425909">377 342 5909</a> / <a href="https://www.google.com/maps/search/?api=1&query=Via%20Caltanissetta%2045%2075025%20Policoro%20MT">Apri Maps</a></p>
-        </article>
+        <div class="push-grid" id="evidenza-list"></div>
       </section>
-    </main>
 
-    <nav class="mobile-actions" aria-label="Azioni rapide">
-      <a href="#menu">Menu</a>
-      <a href="#featured-title">Evidenza</a>
-      <a href="tel:+393773425909">Chiama</a>
-    </nav>
+      <section class="menu-section" id="bbq">
+        <header class="section-title"><span>Fumo, tempo, brace</span><h2>American BBQ</h2><i></i></header>
+        <figure class="section-photo photo-left"><img src="assets/menu/pork-ribs.jpg" alt="BBQ ribs Tunnel 2.0" loading="lazy"><figcaption>Low and slow</figcaption></figure>
+        <div class="menu-list" id="bbq-list"></div>
+      </section>
 
-    <script src="script.js"></script>
-  </body>
+      <section class="menu-section" id="frollatore">
+        <header class="section-title"><span>Al banco</span><h2>Dal frollatore</h2><i></i></header>
+        <aside class="meat-callout">
+          <span>Scelta guidata</span>
+          <h3>La carne si sceglie prima con gli occhi.</h3>
+          <p>Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus irlandese e spagnolo, Masurya, Wagyu A5. Peso e cottura si definiscono con lo staff.</p>
+        </aside>
+        <div class="menu-list" id="frollatore-list"></div>
+      </section>
+
+      <section class="menu-section" id="mix">
+        <header class="section-title"><span>Per tavoli affamati</span><h2>American BBQ Mixes</h2><i></i></header>
+        <div class="mix-callout"><span>Consiglio</span><h3>Se siete in gruppo, partite da qui.</h3><p>Il cliente non deve comporre: sceglie il numero di persone e assaggia piu specialita.</p></div>
+        <div class="menu-list" id="mix-list"></div>
+      </section>
+
+      <section class="menu-section" id="burger">
+        <header class="section-title"><span>Panini importanti</span><h2>Burger & Smash</h2><i></i></header>
+        <figure class="section-photo photo-wide"><img src="assets/menu/bacon-crispy.jpg" alt="Burger Tunnel 2.0" loading="lazy"><figcaption>Firma 2.0</figcaption></figure>
+        <div class="menu-list" id="burger-list"></div>
+      </section>
+
+      <section class="menu-section" id="antipasti">
+        <header class="section-title"><span>Per cominciare</span><h2>Antipasti</h2><i></i></header>
+        <div class="menu-list" id="antipasti-list"></div>
+      </section>
+
+      <section class="menu-section" id="sides">
+        <header class="section-title"><span>Da affiancare</span><h2>Sides & fritti</h2><i></i></header>
+        <figure class="section-photo photo-left"><img src="assets/menu/patatine-bacon.jpg" alt="Patatine cheddar e bacon Tunnel 2.0" loading="lazy"><figcaption>Side consigliato</figcaption></figure>
+        <div class="menu-list" id="sides-list"></div>
+      </section>
+
+      <section class="menu-section" id="dolci">
+        <header class="section-title"><span>Finale</span><h2>Dolci</h2><i></i></header>
+        <aside class="dessert-callout">
+          <span>Prezzo facile</span>
+          <h3>Tutti a 4 EUR.</h3>
+          <p>Scelta rapida dopo una cena intensa: tiramisu, cheesecake, mousse limone, sacher o souffle.</p>
+        </aside>
+        <div class="menu-list" id="dolci-list"></div>
+      </section>
+    </div>
+
+    <section class="practical">
+      <div><span>01</span><h3>Allergeni</h3><p>Chiedere sempre conferma al personale prima di ordinare.</p></div>
+      <div><span>02</span><h3>Frollatore</h3><p>Tagli e disponibilita possono cambiare in base alla serata.</p></div>
+      <div><span>03</span><h3>Prenota</h3><p><a href="tel:+393773425909">377 342 5909</a> / Via Caltanissetta 45, Policoro.</p></div>
+    </section>
+  </main>
+
+  <a class="back-to-index" href="#indice" aria-label="Torna all'indice"><span>&uarr;</span> Indice</a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Anteprima foto prodotto">
+    <button class="lightbox-close" type="button" aria-label="Chiudi anteprima">&times;</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <footer>
+    <img src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
+    <p>Via Caltanissetta 45 / Policoro MT</p>
+    <a href="tel:+393773425909">377 342 5909</a>
+    <small>Prezzi in euro / Foto prodotto da libreria media del gruppo / Chiedere allo staff per allergeni e disponibilita</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

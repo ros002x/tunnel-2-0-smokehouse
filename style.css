@@ -166,6 +166,51 @@ footer > a {
   letter-spacing: 0.01em;
 }
 
+.flame-title {
+  position: relative;
+  isolation: isolate;
+}
+
+.flame-title span,
+.flame-title em {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: fit-content;
+}
+
+.flame-title span::before,
+.flame-title em::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 2%;
+  bottom: 0.62em;
+  height: 0.38em;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 12% 100%, rgba(255, 213, 76, 0.95) 0 22%, rgba(209, 49, 36, 0.85) 42%, transparent 68%),
+    radial-gradient(ellipse at 34% 100%, rgba(255, 239, 145, 0.92) 0 18%, rgba(230, 84, 35, 0.9) 40%, transparent 70%),
+    radial-gradient(ellipse at 62% 100%, rgba(255, 210, 67, 0.92) 0 20%, rgba(209, 49, 36, 0.86) 42%, transparent 68%),
+    radial-gradient(ellipse at 86% 100%, rgba(255, 238, 133, 0.9) 0 16%, rgba(230, 84, 35, 0.86) 40%, transparent 68%);
+  filter: blur(1px);
+  opacity: 0.96;
+  transform: skewX(-10deg);
+}
+
+.flame-title span::after,
+.flame-title em::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 6%;
+  bottom: 0.12em;
+  height: 0.12em;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent, #ffbe45 14%, #d13124 48%, #ffef83 74%, transparent);
+  box-shadow: 0 10px 24px rgba(209, 49, 36, 0.55);
+}
+
 .brand-panel h1 em,
 .intro h2 em {
   color: var(--red);
@@ -855,6 +900,12 @@ body.lightbox-open {
 
   .brand-panel h1 {
     font-size: clamp(68px, 21vw, 98px);
+  }
+
+  .flame-title span::before,
+  .flame-title em::before {
+    bottom: 0.58em;
+    height: 0.32em;
   }
 
   .welcome {

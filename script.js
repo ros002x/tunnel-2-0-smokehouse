@@ -1,6 +1,6 @@
 const topbar = document.querySelector("[data-topbar]");
 const filterButtons = document.querySelectorAll("[data-filter]");
-const dishes = document.querySelectorAll("[data-category]");
+const menuItems = document.querySelectorAll("[data-category]");
 
 const updateTopbar = () => {
   topbar.classList.toggle("is-solid", window.scrollY > 18);
@@ -16,9 +16,9 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((item) => item.classList.remove("is-active"));
     button.classList.add("is-active");
 
-    dishes.forEach((dish) => {
-      const shouldShow = filter === "all" || dish.dataset.category === filter;
-      dish.classList.toggle("is-hidden", !shouldShow);
+    menuItems.forEach((item) => {
+      const shouldShow = filter === "all" || item.dataset.category === filter;
+      item.classList.toggle("hidden", !shouldShow);
     });
   });
 });

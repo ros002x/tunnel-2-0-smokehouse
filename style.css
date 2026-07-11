@@ -172,14 +172,17 @@ button {
 }
 
 .hero__image {
-  background: url("assets/hero-smokehouse-interior.png") center / cover no-repeat;
-  transform: scale(1.03);
+  background:
+    radial-gradient(circle at 78% 46%, rgba(195, 72, 38, 0.34), transparent 24%),
+    radial-gradient(circle at 72% 62%, rgba(201, 152, 86, 0.2), transparent 28%),
+    linear-gradient(135deg, rgba(32, 25, 18, 0.94), rgba(10, 9, 8, 0.96) 54%, rgba(0, 0, 0, 1));
 }
 
 .hero__overlay {
   background:
-    radial-gradient(circle at 72% 52%, rgba(195, 72, 38, 0.16), transparent 30%),
-    linear-gradient(90deg, rgba(10, 9, 8, 0.96) 0%, rgba(10, 9, 8, 0.84) 42%, rgba(10, 9, 8, 0.2) 100%),
+    repeating-linear-gradient(90deg, rgba(241, 230, 210, 0.045) 0 1px, transparent 1px 76px),
+    repeating-linear-gradient(0deg, rgba(241, 230, 210, 0.025) 0 1px, transparent 1px 76px),
+    linear-gradient(90deg, rgba(10, 9, 8, 0.96) 0%, rgba(10, 9, 8, 0.78) 44%, rgba(10, 9, 8, 0.54) 100%),
     linear-gradient(0deg, rgba(10, 9, 8, 0.98) 0%, rgba(10, 9, 8, 0.22) 42%);
 }
 
@@ -255,6 +258,14 @@ h3 {
   background: rgba(12, 10, 8, 0.76);
   border: 1px solid var(--line);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.42);
+}
+
+.hero__ticket img {
+  display: block;
+  width: min(210px, 70%);
+  height: auto;
+  margin: 0 0 24px;
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.36));
 }
 
 .hero__ticket span,
@@ -585,8 +596,9 @@ h3 {
 
   .hero__overlay {
     background:
-      linear-gradient(180deg, rgba(10, 9, 8, 0.58) 0%, rgba(10, 9, 8, 0.86) 46%, rgba(10, 9, 8, 1) 100%),
-      linear-gradient(90deg, rgba(10, 9, 8, 0.9), rgba(10, 9, 8, 0.22));
+      repeating-linear-gradient(90deg, rgba(241, 230, 210, 0.04) 0 1px, transparent 1px 56px),
+      linear-gradient(180deg, rgba(10, 9, 8, 0.48) 0%, rgba(10, 9, 8, 0.88) 46%, rgba(10, 9, 8, 1) 100%),
+      linear-gradient(90deg, rgba(10, 9, 8, 0.9), rgba(10, 9, 8, 0.28));
   }
 
   .hero__content {

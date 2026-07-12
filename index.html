@@ -11,20 +11,27 @@
 </head>
 <body>
   <svg class="chalk-sprite" aria-hidden="true" focusable="false">
+    <filter id="chalk-rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="8"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.35"/>
+    </filter>
     <symbol id="chalk-ribs" viewBox="0 0 120 90">
       <path d="M22 55c12-20 28-31 48-34 15-2 26 1 30 9 5 9-1 22-15 33-18 14-43 18-60 9-7-4-8-10-3-17Z"/>
       <path d="M35 60c8-11 19-18 33-21M48 69c8-14 21-22 39-25M66 70c6-12 14-20 26-25"/>
       <path d="M20 56c-7-2-11-7-9-12 2-6 11-8 18-3M84 26c4-8 12-11 19-7 6 4 5 13-2 18"/>
+      <path d="M29 50c9-3 20-5 33-7M39 74c11 2 24 1 38-4M91 34c5 5 5 12 0 20"/>
     </symbol>
     <symbol id="chalk-steak" viewBox="0 0 120 90">
       <path d="M18 47c2-21 26-33 53-31 25 2 39 15 35 31-4 18-27 30-52 27-23-2-38-13-36-27Z"/>
       <path d="M48 46c0-9 8-16 18-15 10 1 16 8 15 16-1 9-9 15-19 14-9-1-15-7-14-15Z"/>
       <path d="M27 50c18-7 42-9 70-3M32 62c21-3 39 0 55 8"/>
+      <path d="M31 38c11-9 26-14 44-13M84 32c9 4 14 10 15 18"/>
     </symbol>
     <symbol id="chalk-burger" viewBox="0 0 120 90">
       <path d="M24 39c4-16 19-25 38-25s34 9 38 25H24Z"/>
       <path d="M20 48h84M25 58c14 5 23 5 36 0 12-4 23-4 38 0M25 68h74"/>
       <path d="M39 28h1M55 23h1M73 27h1M88 34h1"/>
+      <path d="M30 42c15-3 38-3 65 0M31 73c16 3 36 3 60 0"/>
     </symbol>
     <symbol id="chalk-fries" viewBox="0 0 120 90">
       <path d="M36 78 28 36h64l-8 42H36Z"/>

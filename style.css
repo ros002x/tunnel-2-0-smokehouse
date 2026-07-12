@@ -8,6 +8,7 @@
   --red: #ef4136;
   --amber: #c9822a;
   --amber-soft: rgba(201, 130, 42, 0.22);
+  --ember: rgba(239, 65, 54, 0.28);
   --max: 1120px;
 }
 
@@ -26,7 +27,7 @@ body {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-    radial-gradient(circle at 80% 0%, rgba(239, 65, 54, 0.16), transparent 30%),
+    radial-gradient(ellipse at 50% -8%, rgba(239, 65, 54, 0.22), transparent 38%),
     var(--bg);
   background-size: 18px 18px, 18px 18px, 100% 100%, 100% 100%;
 }
@@ -49,7 +50,7 @@ a {
 }
 
 .hero {
-  min-height: 620px;
+  min-height: 650px;
   display: grid;
   align-content: start;
   position: relative;
@@ -64,10 +65,9 @@ a {
   inset: 18px;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(244, 238, 226, 0.55), transparent 18%) top left / 42% 2px no-repeat,
-    linear-gradient(180deg, rgba(244, 238, 226, 0.55), transparent 18%) top left / 2px 46% no-repeat,
-    linear-gradient(270deg, rgba(244, 238, 226, 0.38), transparent 18%) bottom right / 38% 2px no-repeat,
-    linear-gradient(0deg, rgba(244, 238, 226, 0.38), transparent 18%) bottom right / 2px 42% no-repeat;
+    radial-gradient(ellipse at center bottom, transparent 0 48%, rgba(244, 238, 226, 0.26) 48.3% 49.1%, transparent 49.5%),
+    radial-gradient(ellipse at center bottom, transparent 0 58%, rgba(201, 130, 42, 0.28) 58.3% 59%, transparent 59.4%);
+  opacity: 0.82;
 }
 
 .hero::after {
@@ -108,6 +108,43 @@ a {
   z-index: 1;
 }
 
+.tunnel-mark {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  width: min(760px, 92vw);
+  height: min(430px, 58vw);
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  border: 2px solid rgba(244, 238, 226, 0.16);
+  border-bottom: 0;
+  border-radius: 420px 420px 0 0;
+  box-shadow:
+    inset 0 0 0 16px rgba(244, 238, 226, 0.018),
+    inset 0 -48px 80px rgba(239, 65, 54, 0.16),
+    0 42px 110px rgba(239, 65, 54, 0.14);
+}
+
+.tunnel-mark::before,
+.tunnel-mark::after {
+  content: "";
+  position: absolute;
+  inset: 26px 34px 0;
+  border: 1px dashed rgba(244, 238, 226, 0.18);
+  border-bottom: 0;
+  border-radius: 380px 380px 0 0;
+}
+
+.tunnel-mark::after {
+  inset: auto 10% 0;
+  height: 3px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--amber), transparent);
+  filter: blur(0.2px);
+}
+
 .logo {
   width: min(190px, 58vw);
   height: 118px;
@@ -141,7 +178,7 @@ a {
   color: var(--red);
   font-size: clamp(64px, 13vw, 138px);
   line-height: 0.82;
-  text-shadow: 0 3px 0 #000;
+  text-shadow: 0 3px 0 #000, 0 0 34px rgba(239, 65, 54, 0.28);
 }
 
 .lead {
@@ -168,18 +205,26 @@ a {
   max-width: 760px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 0;
   margin: 34px auto 0;
+  border: 1px solid rgba(244, 238, 226, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(10, 9, 8, 0.58);
 }
 
 .hero-notes span {
   padding: 13px 12px;
-  border-block: 1px solid var(--line);
+  border-right: 1px solid var(--line);
   color: var(--chalk);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 10px;
   font-weight: 900;
+}
+
+.hero-notes span:last-child {
+  border-right: 0;
 }
 
 main {
@@ -197,9 +242,9 @@ main {
   overflow-x: auto;
   margin: 0 0 34px;
   padding: 13px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px dashed rgba(244, 238, 226, 0.22);
-  background: rgba(7, 7, 6, 0.94);
+  border: 1px solid rgba(244, 238, 226, 0.14);
+  border-radius: 999px;
+  background: rgba(7, 7, 6, 0.9);
   backdrop-filter: blur(12px);
 }
 
@@ -225,17 +270,40 @@ main {
 .board-section {
   scroll-margin-top: 86px;
   position: relative;
-  padding: 50px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 56px 0;
+  border-bottom: 0;
 }
 
 .board-section:first-of-type {
   padding-top: 18px;
 }
 
+.board-section + .board-section {
+  border-top: 1px solid rgba(244, 238, 226, 0.12);
+}
+
+.board-section::after {
+  content: "";
+  position: absolute;
+  inset: 26px -22px 24px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 64px 12px 72px 12px;
+  background:
+    radial-gradient(circle at 95% 0%, rgba(201, 130, 42, 0.07), transparent 32%),
+    linear-gradient(135deg, rgba(244, 238, 226, 0.035), transparent 34%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.board-section:hover::after,
+.board-section.highlight::after {
+  opacity: 1;
+}
+
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.44fr);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.4fr);
   gap: 12px 28px;
   align-items: end;
   margin-bottom: 28px;
@@ -245,6 +313,7 @@ main {
   color: var(--chalk);
   font-size: clamp(38px, 5vw, 60px);
   line-height: 0.88;
+  max-width: 760px;
 }
 
 .section-heading span {
@@ -263,7 +332,7 @@ main {
   grid-column: 1 / -1;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--amber), rgba(244, 238, 226, 0.35), transparent);
+  background: radial-gradient(ellipse at left, var(--amber), rgba(244, 238, 226, 0.28) 42%, transparent 74%);
 }
 
 .signature {
@@ -273,10 +342,10 @@ main {
   align-items: end;
   margin-bottom: 28px;
   padding: 28px;
-  border-left: 4px solid var(--amber);
+  border-left: 5px solid var(--amber);
   border-top: 1px solid rgba(201, 130, 42, 0.48);
   border-bottom: 1px solid rgba(244, 238, 226, 0.14);
-  border-radius: 28px 8px 24px 6px;
+  border-radius: 48px 10px 42px 10px;
   background:
     linear-gradient(135deg, rgba(239, 65, 54, 0.12), transparent 42%),
     rgba(16, 16, 15, 0.82);
@@ -314,7 +383,7 @@ main {
   padding: 20px;
   border-top: 1px solid rgba(201, 130, 42, 0.58);
   border-left: 1px solid rgba(244, 238, 226, 0.12);
-  border-radius: 20px 4px 18px 4px;
+  border-radius: 34px 6px 30px 6px;
   background:
     radial-gradient(circle at 100% 0%, rgba(201, 130, 42, 0.12), transparent 40%),
     rgba(16, 16, 15, 0.48);
@@ -343,7 +412,7 @@ main {
   margin: 0 0 22px;
   padding: 18px 20px;
   border-left: 3px solid var(--amber);
-  border-radius: 18px 4px 18px 4px;
+  border-radius: 34px 6px 30px 6px;
   background: var(--amber-soft);
   color: var(--muted);
   font-size: 15px;
@@ -354,7 +423,8 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 28px;
-  border-top: 1px solid var(--line);
+  border-top: 0;
+  padding-top: 4px;
 }
 
 .menu-item {
@@ -363,7 +433,13 @@ main {
   gap: 8px 10px;
   align-items: baseline;
   padding: 16px 0;
-  border-bottom: 1px dashed rgba(244, 238, 226, 0.2);
+  border-bottom: 1px dashed rgba(244, 238, 226, 0.18);
+}
+
+.menu-item:nth-child(4n + 1) {
+  padding-left: 10px;
+  border-left: 2px solid rgba(201, 130, 42, 0.24);
+  border-radius: 18px 0 0 18px;
 }
 
 .menu-item h3 {
@@ -427,7 +503,8 @@ main {
   bottom: 18px;
   z-index: 50;
   padding: 12px 15px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(244, 238, 226, 0.18);
+  border-radius: 999px;
   background: rgba(7, 7, 6, 0.92);
   color: var(--chalk);
   text-transform: uppercase;
@@ -473,7 +550,7 @@ footer small {
 
 @media (max-width: 760px) {
   .hero {
-    min-height: 560px;
+    min-height: 590px;
   }
 
   .hero::before {
@@ -505,10 +582,20 @@ footer small {
 
   .hero-notes {
     grid-template-columns: 1fr;
+    border-radius: 28px;
   }
 
   .hero-notes {
     gap: 0;
+  }
+
+  .hero-notes span {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-notes span:last-child {
+    border-bottom: 0;
   }
 
   main {
@@ -519,6 +606,8 @@ footer small {
   .category-nav {
     margin-inline: -14px;
     padding-inline: 14px;
+    border-radius: 0;
+    border-inline: 0;
   }
 
   .section-heading {

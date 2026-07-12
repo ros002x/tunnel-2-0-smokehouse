@@ -1,5 +1,7 @@
 :root {
-  --red: #a80505;
+  --bg: #090807;
+  --wall: #15110f;
+  --red: #e31b16;
   --red-hot: #e31b16;
   --paper: #f4ead7;
   --muted: rgba(244, 234, 215, 0.72);
@@ -23,9 +25,9 @@ body {
   color: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.08), transparent 2px),
-    radial-gradient(circle at 78% 42%, rgba(255, 255, 255, 0.06), transparent 2px),
-    linear-gradient(180deg, #b00605, #970505 45%, #7f0303);
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.055), transparent 2px),
+    radial-gradient(circle at 78% 42%, rgba(255, 255, 255, 0.045), transparent 2px),
+    linear-gradient(135deg, #1b1613, var(--bg) 52%, #15100e);
   background-size: 72px 72px, 96px 96px, 100% 100%;
 }
 
@@ -210,10 +212,14 @@ footer {
 }
 
 main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 22px;
   padding: 28px 0 86px;
 }
 
 .menu-title {
+  grid-column: 1 / -1;
   margin: 6px 0 22px;
   text-align: center;
 }
@@ -225,6 +231,7 @@ main {
 }
 
 .category-nav {
+  grid-column: 1 / -1;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -233,7 +240,8 @@ main {
   overflow-x: auto;
   margin: 0 0 24px;
   padding: 12px;
-  background: rgba(150, 3, 3, 0.92);
+  background: rgba(8, 8, 7, 0.94);
+  border: 1px solid rgba(244, 234, 215, 0.12);
   backdrop-filter: blur(12px);
 }
 
@@ -250,8 +258,9 @@ main {
 }
 
 .board-section {
+  grid-column: span 6;
   position: relative;
-  margin: 22px 0;
+  margin: 0;
   padding: 28px;
   overflow: hidden;
   background:
@@ -262,6 +271,12 @@ main {
   background-size: 18px 18px, 18px 18px, 100% 100%, 100% 100%;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
   scroll-margin-top: 88px;
+}
+
+.board-section.highlight,
+#bbq,
+#burger {
+  grid-column: span 12;
 }
 
 .board-section::before {
@@ -276,7 +291,7 @@ main {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.36fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px 28px;
   align-items: end;
   margin-bottom: 26px;
@@ -294,10 +309,11 @@ main {
 }
 
 .section-heading span {
+  max-width: 520px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.45;
-  text-align: right;
+  text-align: left;
 }
 
 .section-heading::after {
@@ -407,8 +423,14 @@ main {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 28px;
+}
+
+.board-section.highlight .menu-list,
+#bbq .menu-list,
+#burger .menu-list {
+  grid-template-columns: 1fr 1fr;
 }
 
 .menu-item {
@@ -450,6 +472,7 @@ main {
 }
 
 .practical {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
@@ -534,6 +557,10 @@ footer small {
     width: calc(100% - 22px);
   }
 
+  main {
+    display: block;
+  }
+
   .hero {
     min-height: 560px;
     padding-inline: 16px;
@@ -559,6 +586,9 @@ footer small {
   .hero-notes,
   .push-grid,
   .menu-list,
+  .board-section.highlight .menu-list,
+  #bbq .menu-list,
+  #burger .menu-list,
   .practical {
     grid-template-columns: 1fr;
   }
@@ -567,7 +597,8 @@ footer small {
     margin-inline: -11px;
   }
 
-  .board-section {
+.board-section {
+    margin: 18px 0;
     padding: 24px 18px;
   }
 

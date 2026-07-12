@@ -3,170 +3,129 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#120f0e">
+  <meta name="theme-color" content="#080807">
   <meta name="description" content="Menu Tunnel 2.0 Smokehouse a Policoro: BBQ low and slow, frollatore, burger, tavolate, sides e dolci.">
   <title>Tunnel 2.0 Smokehouse - Menu</title>
   <link rel="preload" href="assets/tunnel-logo-official.png" as="image">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <svg class="chalk-sprite" aria-hidden="true" focusable="false">
-    <filter id="chalk-rough">
-      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="8"/>
-      <feDisplacementMap in="SourceGraphic" scale="1.35"/>
-    </filter>
-    <symbol id="chalk-ribs" viewBox="0 0 120 90">
-      <path d="M22 55c12-20 28-31 48-34 15-2 26 1 30 9 5 9-1 22-15 33-18 14-43 18-60 9-7-4-8-10-3-17Z"/>
-      <path d="M35 60c8-11 19-18 33-21M48 69c8-14 21-22 39-25M66 70c6-12 14-20 26-25"/>
-      <path d="M20 56c-7-2-11-7-9-12 2-6 11-8 18-3M84 26c4-8 12-11 19-7 6 4 5 13-2 18"/>
-      <path d="M29 50c9-3 20-5 33-7M39 74c11 2 24 1 38-4M91 34c5 5 5 12 0 20"/>
-    </symbol>
-    <symbol id="chalk-steak" viewBox="0 0 120 90">
-      <path d="M18 47c2-21 26-33 53-31 25 2 39 15 35 31-4 18-27 30-52 27-23-2-38-13-36-27Z"/>
-      <path d="M48 46c0-9 8-16 18-15 10 1 16 8 15 16-1 9-9 15-19 14-9-1-15-7-14-15Z"/>
-      <path d="M27 50c18-7 42-9 70-3M32 62c21-3 39 0 55 8"/>
-      <path d="M31 38c11-9 26-14 44-13M84 32c9 4 14 10 15 18"/>
-    </symbol>
-    <symbol id="chalk-burger" viewBox="0 0 120 90">
-      <path d="M24 39c4-16 19-25 38-25s34 9 38 25H24Z"/>
-      <path d="M20 48h84M25 58c14 5 23 5 36 0 12-4 23-4 38 0M25 68h74"/>
-      <path d="M39 28h1M55 23h1M73 27h1M88 34h1"/>
-      <path d="M30 42c15-3 38-3 65 0M31 73c16 3 36 3 60 0"/>
-    </symbol>
-    <symbol id="chalk-fries" viewBox="0 0 120 90">
-      <path d="M36 78 28 36h64l-8 42H36Z"/>
-      <path d="M38 35 34 10M49 35l-1-28M61 35 64 9M74 35l9-25"/>
-      <path d="M36 50c14 7 31 8 49 0M40 62c12 4 25 4 40 0"/>
-    </symbol>
-    <symbol id="chalk-dessert" viewBox="0 0 120 90">
-      <path d="M28 62h64M35 62l8-32h34l8 32M43 30c5-12 23-16 34 0"/>
-      <path d="M48 45h24M46 54h28M57 20c1-6 5-10 11-12"/>
-      <path d="M43 73c13 5 30 5 44 0"/>
-    </symbol>
-    <symbol id="chalk-skewer" viewBox="0 0 120 90">
-      <path d="M17 73 103 17"/>
-      <path d="M34 51c-7-1-11-7-8-13 8-3 14 0 17 7-1 5-4 7-9 6ZM55 38c-7-2-10-8-6-14 8-2 14 2 16 9-1 5-5 7-10 5ZM77 25c-6-2-9-8-5-13 8-2 13 2 15 8-1 4-5 6-10 5Z"/>
-    </symbol>
-  </svg>
-  <header class="masthead" id="top">
-    <div class="topline">
-      <span>Policoro MT / Via Caltanissetta 45</span>
-      <a href="tel:+393773425909">Prenota / 377 342 5909</a>
+  <header class="hero" id="top">
+    <div class="topbar">
+      <span>Via Caltanissetta 45 / Policoro MT</span>
+      <a href="tel:+393773425909">377 342 5909</a>
     </div>
-    <div class="brand-panel">
-      <p class="claim">Smokehouse / Policoro</p>
+
+    <div class="hero-inner">
       <img class="logo" src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">
-      <h1 class="flame-title"><span>Tunnel 2.0</span><em>Smokehouse</em></h1>
-      <p class="welcome">Cotture lente, carne scelta e piatti da condividere. Parti dalle specialita consigliate oppure entra direttamente nella categoria.</p>
-      <a class="down" href="#carta">Apri la carta <span>&darr;</span></a>
+      <p class="eyebrow">Smokehouse / steakhouse / ristopub</p>
+      <h1>Tunnel 2.0</h1>
+      <p class="lead">Carne alla brace, BBQ affumicato, burger e tagli dal frollatore. Una carta diretta: scegli la categoria, guarda il prezzo, ordina.</p>
+      <a class="cta" href="#menu">Apri il menu</a>
     </div>
   </header>
 
-  <main id="carta">
-    <div class="menu-shell">
-      <section class="board-head">
-        <p>Tunnel 2.0 / Policoro</p>
-        <h2>Menu</h2>
-        <p>Cotture lente, frollatore, burger, antipasti, sides e dolci. Vai alla sezione o parti dalle specialita consigliate.</p>
-      </section>
+  <main id="menu">
+    <nav class="category-nav" id="indice" aria-label="Categorie menu">
+      <a href="#evidenza">In evidenza</a>
+      <a href="#bbq">BBQ</a>
+      <a href="#frollatore">Frollatore</a>
+      <a href="#mix">Mix BBQ</a>
+      <a href="#burger">Burger</a>
+      <a href="#antipasti">Antipasti</a>
+      <a href="#sides">Sides</a>
+      <a href="#dolci">Dolci</a>
+    </nav>
 
-      <nav class="category-nav" id="indice" aria-label="Categorie menu">
-        <a href="#evidenza">In evidenza</a>
-        <a href="#bbq">BBQ</a>
-        <a href="#frollatore">Frollatore</a>
-        <a href="#mix">Mix BBQ</a>
-        <a href="#burger">Burger</a>
-        <a href="#antipasti">Antipasti</a>
-        <a href="#sides">Sides</a>
-        <a href="#dolci">Dolci</a>
-      </nav>
-
-      <section class="menu-section" id="evidenza">
-        <header class="section-title"><span>La chance giusta</span><h2>Da mettere davanti</h2><i></i></header>
-        <article class="hero-product">
-          <svg class="chalk-icon hero-icon"><use href="#chalk-ribs"></use></svg>
-          <div>
-            <span>Best seller smokehouse</span>
-            <h3>Baby Back Ribs</h3>
-            <p>Costine affumicate con ciliegio. Sono immediate, sceniche e raccontano subito il locale.</p>
-          </div>
-          <strong>15<small>EUR</small></strong>
-        </article>
-        <div class="push-grid" id="evidenza-list"></div>
-      </section>
-
-      <section class="menu-section" id="bbq">
-        <header class="section-title"><span>Fumo, tempo, brace</span><h2>American BBQ</h2><i></i></header>
-        <aside class="section-poster photo-left">
-          <svg class="chalk-icon poster-icon"><use href="#chalk-ribs"></use></svg>
-          <span>Low and slow</span><strong>Affumicatura / Legni / Tempo</strong>
-        </aside>
-        <div class="menu-list" id="bbq-list"></div>
-      </section>
-
-      <section class="menu-section" id="frollatore">
-        <header class="section-title"><span>Al banco</span><h2>Dal frollatore</h2><i></i></header>
-        <aside class="meat-callout">
-          <svg class="chalk-icon callout-icon"><use href="#chalk-steak"></use></svg>
-          <span>Scelta guidata</span>
-          <h3>La carne si sceglie prima con gli occhi.</h3>
-          <p>Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus irlandese e spagnolo, Masurya, Wagyu A5. Peso e cottura si definiscono con lo staff.</p>
-        </aside>
-        <div class="menu-list" id="frollatore-list"></div>
-      </section>
-
-      <section class="menu-section" id="mix">
-        <header class="section-title"><span>Per tavoli affamati</span><h2>American BBQ Mixes</h2><i></i></header>
-        <div class="mix-callout">
-          <svg class="chalk-icon callout-icon"><use href="#chalk-skewer"></use></svg>
-          <span>Consiglio</span><h3>Se siete in gruppo, partite da qui.</h3><p>Il cliente non deve comporre: sceglie il numero di persone e assaggia piu specialita.</p>
+    <section class="board-section highlight" id="evidenza">
+      <header class="section-heading">
+        <p>Parti da qui</p>
+        <h2>In evidenza</h2>
+      </header>
+      <article class="signature">
+        <div>
+          <span>Best seller</span>
+          <h3>Baby Back Ribs</h3>
+          <p>Costine affumicate con legno di ciliegio, servite con patatine. Sceniche, immediate, perfette per raccontare la smokehouse.</p>
         </div>
-        <div class="menu-list" id="mix-list"></div>
-      </section>
+        <strong>15 EUR</strong>
+      </article>
+      <div class="push-grid" id="evidenza-list"></div>
+    </section>
 
-      <section class="menu-section" id="burger">
-        <header class="section-title"><span>Panini importanti</span><h2>Burger & Smash</h2><i></i></header>
-        <aside class="section-poster photo-wide">
-          <svg class="chalk-icon poster-icon"><use href="#chalk-burger"></use></svg>
-          <span>Firma 2.0</span><strong>Burger, smash e pulled pork</strong>
-        </aside>
-        <div class="menu-list" id="burger-list"></div>
-      </section>
+    <section class="board-section" id="bbq">
+      <header class="section-heading">
+        <p>Low and slow</p>
+        <h2>American BBQ</h2>
+        <span>Affumicatura, legni e cotture lente.</span>
+      </header>
+      <div class="menu-list" id="bbq-list"></div>
+    </section>
 
-      <section class="menu-section" id="antipasti">
-        <header class="section-title"><span>Per cominciare</span><h2>Antipasti</h2><i></i></header>
-        <div class="menu-list" id="antipasti-list"></div>
-      </section>
+    <section class="board-section" id="frollatore">
+      <header class="section-heading">
+        <p>Al banco</p>
+        <h2>Dal frollatore</h2>
+        <span>Tagli disponibili al peso, da scegliere con lo staff.</span>
+      </header>
+      <div class="note">
+        Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus irlandese e spagnolo, Masurya, Wagyu A5. Disponibilita e grammatura cambiano in base alla serata.
+      </div>
+      <div class="menu-list" id="frollatore-list"></div>
+    </section>
 
-      <section class="menu-section" id="sides">
-        <header class="section-title"><span>Da affiancare</span><h2>Sides & fritti</h2><i></i></header>
-        <aside class="section-poster photo-left">
-          <svg class="chalk-icon poster-icon"><use href="#chalk-fries"></use></svg>
-          <span>Side consigliato</span><strong>Cheddar, bacon, pulled pork, cruschi</strong>
-        </aside>
-        <div class="menu-list" id="sides-list"></div>
-      </section>
+    <section class="board-section" id="mix">
+      <header class="section-heading">
+        <p>Per condividere</p>
+        <h2>American BBQ Mixes</h2>
+        <span>La scelta piu comoda per assaggiare piu specialita.</span>
+      </header>
+      <div class="menu-list" id="mix-list"></div>
+    </section>
 
-      <section class="menu-section" id="dolci">
-        <header class="section-title"><span>Finale</span><h2>Dolci</h2><i></i></header>
-        <aside class="dessert-callout">
-          <svg class="chalk-icon callout-icon"><use href="#chalk-dessert"></use></svg>
-          <span>Prezzo facile</span>
-          <h3>Tutti a 4 EUR.</h3>
-          <p>Scelta rapida dopo una cena intensa: tiramisu, cheesecake, mousse limone, sacher o souffle.</p>
-        </aside>
-        <div class="menu-list" id="dolci-list"></div>
-      </section>
-    </div>
+    <section class="board-section" id="burger">
+      <header class="section-heading">
+        <p>Panini importanti</p>
+        <h2>Burger & Smash</h2>
+        <span>Burger firma, smash e pulled pork.</span>
+      </header>
+      <div class="menu-list" id="burger-list"></div>
+    </section>
+
+    <section class="board-section" id="antipasti">
+      <header class="section-heading">
+        <p>Per cominciare</p>
+        <h2>Antipasti</h2>
+      </header>
+      <div class="menu-list" id="antipasti-list"></div>
+    </section>
+
+    <section class="board-section" id="sides">
+      <header class="section-heading">
+        <p>Da affiancare</p>
+        <h2>Sides & fritti</h2>
+        <span>Patatine, cruschi, coleslaw e contorni.</span>
+      </header>
+      <div class="menu-list" id="sides-list"></div>
+    </section>
+
+    <section class="board-section" id="dolci">
+      <header class="section-heading">
+        <p>Finale</p>
+        <h2>Dolci</h2>
+        <span>Tutti a 4 EUR.</span>
+      </header>
+      <div class="menu-list" id="dolci-list"></div>
+    </section>
 
     <section class="practical">
-      <div><span>01</span><h3>Allergeni</h3><p>Chiedere sempre conferma al personale prima di ordinare.</p></div>
-      <div><span>02</span><h3>Frollatore</h3><p>Tagli e disponibilita possono cambiare in base alla serata.</p></div>
-      <div><span>03</span><h3>Prenota</h3><p><a href="tel:+393773425909">377 342 5909</a> / Via Caltanissetta 45, Policoro.</p></div>
+      <div><span>Allergeni</span><p>Chiedere conferma allo staff prima di ordinare.</p></div>
+      <div><span>Frollatore</span><p>Tagli, peso e disponibilita possono cambiare.</p></div>
+      <div><span>Prenota</span><p><a href="tel:+393773425909">377 342 5909</a> / Via Caltanissetta 45.</p></div>
     </section>
   </main>
 
-  <a class="back-to-index" href="#indice" aria-label="Torna all'indice"><span>&uarr;</span> Indice</a>
+  <a class="back-to-index" href="#indice" aria-label="Torna all'indice">Indice</a>
 
   <footer>
     <img src="assets/tunnel-logo-official.png" alt="Tunnel 2.0 Smokehouse">

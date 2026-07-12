@@ -25,10 +25,21 @@ body {
   color: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.055), transparent 2px),
-    radial-gradient(circle at 78% 42%, rgba(255, 255, 255, 0.045), transparent 2px),
+    radial-gradient(ellipse at 18% 12%, rgba(227, 27, 22, 0.08), transparent 34%),
+    radial-gradient(ellipse at 82% 34%, rgba(217, 154, 43, 0.06), transparent 30%),
     linear-gradient(135deg, #1b1613, var(--bg) 52%, #15100e);
-  background-size: 72px 72px, 96px 96px, 100% 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.035), transparent 42%),
+    repeating-linear-gradient(112deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 11px);
+  opacity: 0.45;
 }
 
 a {
@@ -44,17 +55,16 @@ footer {
 }
 
 .hero {
-  min-height: 610px;
+  min-height: 590px;
   position: relative;
   margin-top: 24px;
   padding: 0 26px 38px;
   overflow: hidden;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    radial-gradient(circle at 74% 10%, rgba(227, 27, 22, 0.18), transparent 36%),
+    radial-gradient(ellipse at 74% 10%, rgba(227, 27, 22, 0.18), transparent 36%),
+    radial-gradient(ellipse at 10% 100%, rgba(217, 154, 43, 0.08), transparent 34%),
     #11100f;
-  background-size: 22px 22px, 22px 22px, 100% 100%, 100% 100%;
+  border-radius: 44px 10px 38px 10px;
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
 }
 
@@ -67,7 +77,11 @@ footer {
 
 .hero::before {
   inset: 18px;
-  border: 2px dashed rgba(244, 234, 215, 0.36);
+  border-top: 2px solid rgba(244, 234, 215, 0.28);
+  border-bottom: 2px solid rgba(244, 234, 215, 0.18);
+  border-left: 0;
+  border-right: 0;
+  transform: rotate(-0.4deg);
 }
 
 .hero::after {
@@ -146,6 +160,7 @@ footer {
   padding: 8px 28px 10px;
   color: #fff;
   background: var(--red-hot);
+  border-radius: 20px 3px 18px 3px;
   font-size: clamp(58px, 12vw, 122px);
   line-height: 0.82;
   text-shadow: 0 3px 0 #650000;
@@ -184,7 +199,8 @@ footer {
   display: inline-flex;
   margin-top: 28px;
   padding: 12px 18px;
-  border: 1px dashed rgba(244, 234, 215, 0.42);
+  border: 0;
+  border-bottom: 2px solid var(--red-hot);
   color: var(--paper);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -196,7 +212,7 @@ footer {
   max-width: 760px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
   margin: 34px auto 0;
 }
 
@@ -204,6 +220,7 @@ footer {
   padding: 13px 12px;
   background: rgba(0, 0, 0, 0.34);
   border-top: 2px solid var(--red-hot);
+  border-radius: 18px 3px 16px 3px;
   color: var(--paper);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -240,8 +257,9 @@ main {
   overflow-x: auto;
   margin: 0 0 24px;
   padding: 12px;
-  background: rgba(8, 8, 7, 0.94);
-  border: 1px solid rgba(244, 234, 215, 0.12);
+  background: rgba(8, 8, 7, 0.88);
+  border: 0;
+  border-bottom: 1px solid rgba(244, 234, 215, 0.16);
   backdrop-filter: blur(12px);
 }
 
@@ -250,6 +268,7 @@ main {
   padding: 9px 12px;
   background: #11100f;
   border-left: 3px solid var(--red-hot);
+  border-radius: 16px 2px 14px 2px;
   color: var(--paper);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -264,11 +283,11 @@ main {
   padding: 28px;
   overflow: hidden;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px),
-    radial-gradient(circle at 92% 0%, rgba(227, 27, 22, 0.14), transparent 34%),
+    radial-gradient(ellipse at 92% 0%, rgba(227, 27, 22, 0.13), transparent 34%),
+    radial-gradient(ellipse at 0% 100%, rgba(217, 154, 43, 0.075), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 38%),
     var(--black);
-  background-size: 18px 18px, 18px 18px, 100% 100%, 100% 100%;
+  border-radius: 46px 6px 42px 6px;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
   scroll-margin-top: 88px;
 }
@@ -282,8 +301,10 @@ main {
 .board-section::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px dashed rgba(244, 234, 215, 0.26);
+  inset: 14px 18px;
+  border-top: 1px solid rgba(244, 234, 215, 0.2);
+  border-bottom: 1px solid rgba(244, 234, 215, 0.12);
+  transform: rotate(0.25deg);
   pointer-events: none;
 }
 
@@ -321,7 +342,7 @@ main {
   grid-column: 1 / -1;
   display: block;
   height: 2px;
-  background: repeating-linear-gradient(90deg, var(--red-hot) 0 18px, transparent 18px 26px);
+  background: linear-gradient(90deg, var(--red-hot), rgba(244, 234, 215, 0.28), transparent);
 }
 
 .signature,
@@ -338,7 +359,8 @@ main {
   align-items: end;
   margin-bottom: 24px;
   padding: 24px 0;
-  border-block: 1px solid rgba(244, 234, 215, 0.16);
+  border-top: 1px solid rgba(244, 234, 215, 0.16);
+  border-bottom: 1px solid rgba(244, 234, 215, 0.1);
 }
 
 .signature span,
@@ -347,6 +369,7 @@ main {
   padding: 6px 9px;
   background: var(--red-hot);
   color: #fff;
+  border-radius: 12px 2px 10px 2px;
 }
 
 .signature h3 {
@@ -371,6 +394,7 @@ main {
   min-height: 86px;
   color: #fff;
   border: 2px solid var(--red-hot);
+  border-radius: 18px 3px 16px 3px;
   font: 900 26px Arial, Helvetica, sans-serif;
   text-align: center;
 }
@@ -388,6 +412,7 @@ main {
   padding: 18px;
   background: rgba(255, 255, 255, 0.035);
   border-bottom: 3px solid var(--red-hot);
+  border-radius: 28px 5px 24px 5px;
 }
 
 .push-card h3 {
@@ -414,6 +439,7 @@ main {
   padding: 16px 18px;
   border-left: 4px solid var(--red-hot);
   background: rgba(255, 255, 255, 0.045);
+  border-radius: 24px 4px 20px 4px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.55;
@@ -439,7 +465,7 @@ main {
   gap: 8px 10px;
   align-items: baseline;
   padding: 15px 0;
-  border-bottom: 1px dashed rgba(244, 234, 215, 0.22);
+  border-bottom: 1px solid rgba(244, 234, 215, 0.13);
 }
 
 .menu-item h3 {
@@ -458,6 +484,7 @@ main {
   padding: 4px 6px;
   color: #fff;
   background: rgba(227, 27, 22, 0.82);
+  border-radius: 10px 2px 9px 2px;
   font: 900 13px Arial, Helvetica, sans-serif;
   white-space: nowrap;
 }
@@ -483,6 +510,7 @@ main {
   padding: 18px;
   background: #11100f;
   border-top: 3px solid var(--red-hot);
+  border-radius: 24px 4px 20px 4px;
 }
 
 .practical span {
@@ -508,6 +536,7 @@ main {
   padding: 12px 15px;
   background: #11100f;
   border: 2px solid var(--red-hot);
+  border-radius: 999px;
   color: var(--paper);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -519,6 +548,7 @@ footer {
   margin-bottom: 24px;
   padding: 38px 20px 28px;
   background: #11100f;
+  border-radius: 34px 6px 30px 6px;
   color: var(--muted);
   text-align: center;
 }
@@ -543,7 +573,7 @@ footer small {
   max-width: 760px;
   margin: 34px auto 0;
   padding-top: 18px;
-  border-top: 1px dashed rgba(244, 234, 215, 0.22);
+  border-top: 1px solid rgba(244, 234, 215, 0.14);
   color: rgba(244, 234, 215, 0.48);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -597,7 +627,7 @@ footer small {
     margin-inline: -11px;
   }
 
-.board-section {
+  .board-section {
     margin: 18px 0;
     padding: 24px 18px;
   }

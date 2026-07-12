@@ -292,24 +292,6 @@ footer > a {
   margin-top: 34px;
 }
 
-.intro {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.ornament {
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 16px;
-  color: var(--red);
-  font-size: 28px;
-  font-weight: 900;
-}
-
-.intro > p:first-of-type,
 .section-title span {
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -318,76 +300,6 @@ footer > a {
   color: var(--red);
 }
 
-.intro h2 {
-  margin: 10px 0 18px;
-  color: var(--chalk);
-  font-size: clamp(48px, 9vw, 102px);
-  line-height: 0.84;
-}
-
-.intro-copy {
-  max-width: 620px;
-  margin: 0 auto;
-  color: var(--chalk-soft);
-  font-family: "Segoe Print", "Bradley Hand ITC", "Comic Sans MS", cursive;
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.food-showcase {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 34px 56px;
-  margin: 56px 0 38px;
-  padding: 8px 0 34px;
-  border-bottom: 0;
-}
-
-.food-showcase article {
-  position: relative;
-  flex: 1 1 300px;
-  gap: 8px;
-  min-height: 240px;
-  padding-bottom: 18px;
-  transform: rotate(-1.2deg);
-}
-
-.food-showcase .showcase-main {
-  flex-basis: 46%;
-  min-height: 460px;
-  transform: rotate(1deg);
-}
-
-.food-showcase article:nth-child(2) {
-  flex-basis: 30%;
-  transform: rotate(-2.5deg) translateY(18px);
-}
-
-.food-showcase article:nth-child(3) {
-  flex-basis: 34%;
-  transform: rotate(2deg) translateY(-8px);
-}
-
-.food-showcase .chalk-icon {
-  width: min(310px, 70%);
-  margin-bottom: 8px;
-  transform: rotate(-4deg);
-}
-
-.food-showcase article:nth-child(2) .chalk-icon {
-  width: 190px;
-  color: var(--gold);
-  transform: rotate(7deg);
-}
-
-.food-showcase article:nth-child(3) .chalk-icon {
-  width: 190px;
-  color: var(--chalk);
-  transform: rotate(-6deg);
-}
-
-.food-showcase article span,
 .section-poster span,
 .hero-product span,
 .push-card > span,
@@ -404,21 +316,12 @@ footer > a {
   font-weight: 700;
 }
 
-.food-showcase article b,
 .section-poster strong {
   max-width: 540px;
   color: var(--chalk);
   font: 900 clamp(27px, 4vw, 48px) Arial, Helvetica, sans-serif;
   line-height: 0.96;
   text-transform: uppercase;
-}
-
-.food-showcase article p {
-  max-width: 420px;
-  margin: 0;
-  color: var(--chalk-soft);
-  font-family: "Segoe Print", "Bradley Hand ITC", "Comic Sans MS", cursive;
-  font-size: 14px;
 }
 
 .category-nav {
@@ -907,32 +810,6 @@ footer small {
     padding: 64px 0 86px;
   }
 
-  .intro h2 {
-    font-size: 52px;
-  }
-
-  .food-showcase {
-    min-height: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 34px;
-  }
-
-  .food-showcase article,
-  .food-showcase .showcase-main {
-    min-height: 0;
-  }
-
-  .food-showcase .showcase-main {
-    grid-row: auto;
-  }
-
-  .food-showcase .chalk-icon,
-  .food-showcase article:nth-child(2) .chalk-icon,
-  .food-showcase article:nth-child(3) .chalk-icon {
-    width: min(220px, 72vw);
-  }
-
   .category-nav {
     margin: 38px -14px 34px;
     padding-inline: 14px;
@@ -1041,5 +918,233 @@ footer small {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Reset della direzione precedente: menu piu consultabile, meno poster. */
+.masthead {
+  min-height: 520px;
+}
+
+.brand-panel {
+  padding: 30px 0 62px;
+}
+
+.brand-panel::before,
+.brand-panel::after {
+  opacity: 0.16;
+}
+
+.brand-panel h1 {
+  font-size: clamp(54px, 10vw, 118px);
+}
+
+.welcome {
+  max-width: 560px;
+  margin: 18px auto 22px;
+}
+
+.menu-shell {
+  padding-top: 42px;
+}
+
+.menu-shell::before {
+  margin-bottom: 28px;
+}
+
+.board-head {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.board-head p:first-child {
+  margin: 0 0 8px;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.board-head h2 {
+  margin: 0;
+  color: var(--chalk);
+  font: 400 clamp(52px, 9vw, 92px) Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.board-head p:last-child {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: var(--chalk-soft);
+  font: 15px/1.55 Arial, Helvetica, sans-serif;
+}
+
+.chalk-icon {
+  width: 96px;
+  max-width: 28vw;
+  stroke-width: 3.2;
+  stroke-dasharray: none;
+  opacity: 0.62;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.55));
+}
+
+.hero-icon,
+.poster-icon,
+.callout-icon {
+  width: 116px;
+  max-width: 32vw;
+}
+
+.category-nav {
+  margin: 28px 0 36px;
+  transform: none;
+}
+
+.menu-section {
+  padding: 42px 0;
+}
+
+.menu-section::before {
+  margin-bottom: 34px;
+  transform: none;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: clamp(36px, 6vw, 62px);
+}
+
+.section-title i {
+  transform: none;
+}
+
+.hero-product {
+  min-height: 0;
+  grid-template-columns: 130px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 4px 0 24px;
+  transform: none;
+}
+
+.hero-product h3 {
+  font-size: clamp(34px, 5vw, 58px);
+}
+
+.push-grid {
+  gap: 24px;
+}
+
+.push-card,
+.push-card:nth-child(2),
+.push-card:nth-child(3),
+.section-poster,
+.mix-callout,
+.meat-callout,
+.dessert-callout,
+.menu-item:nth-child(3n + 1),
+.menu-item:nth-child(3n + 2) {
+  transform: none;
+}
+
+.push-card {
+  min-height: 0;
+}
+
+.push-card p {
+  min-height: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-poster {
+  min-height: 170px;
+  margin-bottom: 20px;
+}
+
+.photo-left {
+  width: 30%;
+  min-height: 0;
+  margin-right: 34px;
+  shape-outside: none;
+}
+
+.photo-wide {
+  grid-template-columns: 130px 1fr;
+  min-height: 160px;
+}
+
+.menu-list {
+  column-gap: 54px;
+}
+
+.menu-item {
+  padding: 14px 0;
+}
+
+.menu-item p,
+.mix-callout p,
+.meat-callout p,
+.dessert-callout p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mix-callout,
+.meat-callout,
+.dessert-callout {
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 4px 22px;
+  padding-bottom: 24px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 760px) {
+  .masthead {
+    min-height: 480px;
+  }
+
+  .brand-panel {
+    padding-bottom: 50px;
+  }
+
+  .brand-panel h1 {
+    font-size: clamp(50px, 16vw, 76px);
+  }
+
+  .board-head h2 {
+    font-size: 52px;
+  }
+
+  .hero-product {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+  }
+
+  .hero-product strong {
+    grid-column: 2;
+    margin-top: 8px;
+  }
+
+  .hero-icon,
+  .poster-icon,
+  .callout-icon {
+    width: 84px;
+  }
+
+  .photo-left,
+  .photo-wide,
+  .mix-callout,
+  .meat-callout,
+  .dessert-callout {
+    display: block;
+  }
+
+  .section-poster {
+    min-height: 0;
   }
 }

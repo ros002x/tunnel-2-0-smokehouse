@@ -42,7 +42,7 @@ const menu = {
   ],
   sides: [
     ["Patatine", "Small, medium o large.", "3 / 5 / 8 EUR"],
-    ["Patatine cheddar & bacon", "Side ricco da spingere con burger e ribs.", "7 EUR"],
+    ["Patatine cheddar & bacon", "Side ricco con cheddar e bacon, ideale con burger e ribs.", "7 EUR"],
     ["Patatine pulled pork", "Patatine cariche con pulled pork.", "7 EUR"],
     ["Peperoni cruschi", "Small, medium o large. Il dettaglio lucano da tenere visibile.", "3 / 6 / 10 EUR"],
     ["Coleslaw", "Insalata BBQ ideale con pulled pork e ribs.", "5 EUR"],

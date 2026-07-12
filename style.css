@@ -63,7 +63,11 @@ a {
   position: absolute;
   inset: 18px;
   pointer-events: none;
-  border: 2px solid rgba(244, 238, 226, 0.42);
+  background:
+    linear-gradient(90deg, rgba(244, 238, 226, 0.55), transparent 18%) top left / 42% 2px no-repeat,
+    linear-gradient(180deg, rgba(244, 238, 226, 0.55), transparent 18%) top left / 2px 46% no-repeat,
+    linear-gradient(270deg, rgba(244, 238, 226, 0.38), transparent 18%) bottom right / 38% 2px no-repeat,
+    linear-gradient(0deg, rgba(244, 238, 226, 0.38), transparent 18%) bottom right / 2px 42% no-repeat;
 }
 
 .hero::after {
@@ -152,7 +156,7 @@ a {
   display: inline-flex;
   margin-top: 28px;
   padding: 12px 18px;
-  border: 1px solid rgba(244, 238, 226, 0.44);
+  border-bottom: 2px solid var(--amber);
   color: var(--chalk);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -191,7 +195,8 @@ main {
   align-items: end;
   margin-bottom: 34px;
   padding: 28px 0;
-  border-block: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  border-bottom: 2px solid rgba(201, 130, 42, 0.54);
 }
 
 .menu-intro h2 {
@@ -219,7 +224,8 @@ main {
   overflow-x: auto;
   margin: 0 0 48px;
   padding: 13px 0;
-  border-block: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px dashed rgba(244, 238, 226, 0.22);
   background: rgba(7, 7, 6, 0.94);
   backdrop-filter: blur(12px);
 }
@@ -312,7 +318,10 @@ main {
   align-items: end;
   margin-bottom: 28px;
   padding: 28px;
-  border: 1px solid rgba(201, 130, 42, 0.62);
+  border-left: 4px solid var(--amber);
+  border-top: 1px solid rgba(201, 130, 42, 0.48);
+  border-bottom: 1px solid rgba(244, 238, 226, 0.14);
+  border-radius: 28px 8px 24px 6px;
   background:
     linear-gradient(135deg, rgba(239, 65, 54, 0.12), transparent 42%),
     rgba(16, 16, 15, 0.82);
@@ -348,8 +357,12 @@ main {
 .push-card {
   min-height: 210px;
   padding: 20px;
-  border: 1px solid var(--line);
-  background: rgba(16, 16, 15, 0.66);
+  border-top: 1px solid rgba(201, 130, 42, 0.58);
+  border-left: 1px solid rgba(244, 238, 226, 0.12);
+  border-radius: 20px 4px 18px 4px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 130, 42, 0.12), transparent 40%),
+    rgba(16, 16, 15, 0.48);
 }
 
 .push-card h3 {
@@ -375,6 +388,7 @@ main {
   margin: 0 0 22px;
   padding: 18px 20px;
   border-left: 3px solid var(--amber);
+  border-radius: 18px 4px 18px 4px;
   background: var(--amber-soft);
   color: var(--muted);
   font-size: 15px;

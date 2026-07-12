@@ -22,10 +22,23 @@
       <h1>Tunnel 2.0</h1>
       <p class="lead">Carne alla brace, BBQ affumicato, burger e tagli dal frollatore. Una carta diretta: scegli la categoria, guarda il prezzo, ordina.</p>
       <a class="cta" href="#menu">Apri il menu</a>
+      <div class="hero-notes" aria-label="Punti forti">
+        <span>BBQ low and slow</span>
+        <span>Tagli dal frollatore</span>
+        <span>Mix per tavoli</span>
+      </div>
     </div>
   </header>
 
   <main id="menu">
+    <section class="menu-intro">
+      <div>
+        <p class="eyebrow">Carta Tunnel 2.0</p>
+        <h2>Prima le specialita, poi scegli la sezione.</h2>
+      </div>
+      <p>La pagina deve vendere senza confondere: in alto trovi i prodotti da spingere, sotto il menu completo diviso per fame, tavolo e tipo di carne.</p>
+    </section>
+
     <nav class="category-nav" id="indice" aria-label="Categorie menu">
       <a href="#evidenza">In evidenza</a>
       <a href="#bbq">BBQ</a>
@@ -37,10 +50,11 @@
       <a href="#dolci">Dolci</a>
     </nav>
 
-    <section class="board-section highlight" id="evidenza">
+    <section class="board-section highlight" id="evidenza" data-section="01">
       <header class="section-heading">
         <p>Parti da qui</p>
         <h2>In evidenza</h2>
+        <span>I piatti piu facili da proporre quando il cliente non sa da dove iniziare.</span>
       </header>
       <article class="signature">
         <div>
@@ -53,7 +67,7 @@
       <div class="push-grid" id="evidenza-list"></div>
     </section>
 
-    <section class="board-section" id="bbq">
+    <section class="board-section" id="bbq" data-section="02">
       <header class="section-heading">
         <p>Low and slow</p>
         <h2>American BBQ</h2>
@@ -62,7 +76,7 @@
       <div class="menu-list" id="bbq-list"></div>
     </section>
 
-    <section class="board-section" id="frollatore">
+    <section class="board-section" id="frollatore" data-section="03">
       <header class="section-heading">
         <p>Al banco</p>
         <h2>Dal frollatore</h2>
@@ -74,7 +88,7 @@
       <div class="menu-list" id="frollatore-list"></div>
     </section>
 
-    <section class="board-section" id="mix">
+    <section class="board-section" id="mix" data-section="04">
       <header class="section-heading">
         <p>Per condividere</p>
         <h2>American BBQ Mixes</h2>
@@ -83,7 +97,7 @@
       <div class="menu-list" id="mix-list"></div>
     </section>
 
-    <section class="board-section" id="burger">
+    <section class="board-section" id="burger" data-section="05">
       <header class="section-heading">
         <p>Panini importanti</p>
         <h2>Burger & Smash</h2>
@@ -92,7 +106,7 @@
       <div class="menu-list" id="burger-list"></div>
     </section>
 
-    <section class="board-section" id="antipasti">
+    <section class="board-section" id="antipasti" data-section="06">
       <header class="section-heading">
         <p>Per cominciare</p>
         <h2>Antipasti</h2>
@@ -100,7 +114,7 @@
       <div class="menu-list" id="antipasti-list"></div>
     </section>
 
-    <section class="board-section" id="sides">
+    <section class="board-section" id="sides" data-section="07">
       <header class="section-heading">
         <p>Da affiancare</p>
         <h2>Sides & fritti</h2>
@@ -109,7 +123,7 @@
       <div class="menu-list" id="sides-list"></div>
     </section>
 
-    <section class="board-section" id="dolci">
+    <section class="board-section" id="dolci" data-section="08">
       <header class="section-heading">
         <p>Finale</p>
         <h2>Dolci</h2>

@@ -87,6 +87,25 @@ function renderList(section) {
 
 Object.keys(menu).forEach(renderList);
 
+const categoryLinks = [...document.querySelectorAll(".category-nav a")];
+const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
+
+function getScrollOffset(target) {
+  if (target.id === "menu") return 12;
+  return window.matchMedia("(max-width: 760px)").matches ? 16 : 92;
+}
+
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+
+    event.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset(target);
+    window.scrollTo({ top, behavior: "smooth" });
+  });
+});
+
 const revealNodes = [
   ...document.querySelectorAll(".hero-inner, .menu-title, .board-section, .signature, .note, .push-card, .menu-item, .practical div, footer"),
 ];
@@ -110,3 +129,20 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 revealNodes.forEach((node) => revealObserver.observe(node));
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  const visible = entries
+    .filter((entry) => entry.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+  if (!visible) return;
+
+  categoryLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
+  });
+}, {
+  threshold: [0.18, 0.32, 0.48],
+  rootMargin: "-18% 0px -62% 0px",
+});
+
+document.querySelectorAll(".board-section").forEach((section) => sectionObserver.observe(section));

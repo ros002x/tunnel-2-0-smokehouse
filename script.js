@@ -65,7 +65,7 @@ function renderList(section) {
 
   if (section === "evidenza") {
     node.innerHTML = menu[section].map(([name, description, price]) => `
-      <article class="push-card">
+      <article class="push-card reveal">
         <span>Consigliato</span>
         <h3>${name}</h3>
         <p>${description}</p>
@@ -76,7 +76,7 @@ function renderList(section) {
   }
 
   node.innerHTML = menu[section].map(([name, description, price]) => `
-    <article class="menu-item">
+    <article class="menu-item reveal">
       <h3>${name}</h3>
       <span class="dots"></span>
       <strong>${price}</strong>
@@ -86,3 +86,27 @@ function renderList(section) {
 }
 
 Object.keys(menu).forEach(renderList);
+
+const revealNodes = [
+  ...document.querySelectorAll(".hero-inner, .menu-title, .board-section, .signature, .note, .push-card, .menu-item, .practical div, footer"),
+];
+
+revealNodes.forEach((node, index) => {
+  node.classList.add("reveal");
+  if (node.classList.contains("menu-item") || node.classList.contains("push-card")) {
+    node.style.setProperty("--delay", `${Math.min(index % 6, 5) * 45}ms`);
+  }
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("is-visible");
+    revealObserver.unobserve(entry.target);
+  });
+}, {
+  threshold: 0.12,
+  rootMargin: "0px 0px -8% 0px",
+});
+
+revealNodes.forEach((node) => revealObserver.observe(node));

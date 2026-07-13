@@ -92,7 +92,7 @@ const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
 
 function getScrollOffset(target) {
   if (target.id === "menu") return 12;
-  return window.matchMedia("(max-width: 760px)").matches ? 16 : 92;
+  return window.matchMedia("(max-width: 760px)").matches ? 116 : 92;
 }
 
 scrollLinks.forEach((link) => {

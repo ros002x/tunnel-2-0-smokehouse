@@ -59,12 +59,15 @@ footer {
 }
 
 .hero {
-  min-height: 660px;
+  min-height: 650px;
   position: relative;
   margin-top: 0;
-  padding: 18px 26px 58px;
+  padding: 18px 26px 62px;
   overflow: hidden;
-  background: transparent;
+  background:
+    radial-gradient(ellipse at 50% 38%, rgba(227, 27, 22, 0.18), transparent 42%),
+    radial-gradient(ellipse at 50% 72%, rgba(217, 154, 43, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(8, 8, 7, 0.78), rgba(8, 8, 7, 0.38) 48%, rgba(8, 8, 7, 0.88));
   border-radius: 0;
   box-shadow: none;
 }
@@ -77,23 +80,24 @@ footer {
 }
 
 .hero::before {
-  left: 7%;
-  right: 7%;
-  bottom: 54px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(244, 234, 215, 0.34), rgba(227, 27, 22, 0.52), transparent);
-  transform: rotate(-0.35deg);
+  inset: 58px 0 6px;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 7, 0.16), rgba(8, 8, 7, 0.78)),
+    url("NuovoLogo.png") center 44% / min(720px, 92vw) auto no-repeat;
+  opacity: 0.66;
+  filter: saturate(0.98) contrast(1.1);
 }
 
 .hero::after {
-  left: -4%;
-  right: -4%;
-  bottom: -42px;
-  height: 170px;
+  left: 6%;
+  right: 6%;
+  bottom: 52px;
+  height: 2px;
   background:
-    radial-gradient(ellipse at center, rgba(227, 27, 22, 0.26), transparent 62%),
-    radial-gradient(ellipse at 65% 40%, rgba(217, 154, 43, 0.14), transparent 54%);
-  filter: blur(16px);
+    linear-gradient(90deg, transparent, rgba(244, 234, 215, 0.34), rgba(227, 27, 22, 0.52), transparent);
+  filter: none;
+  transform: rotate(-0.35deg);
 }
 
 .topbar {
@@ -117,8 +121,8 @@ footer {
 .hero-inner {
   position: relative;
   z-index: 1;
-  width: min(860px, 100%);
-  margin: 10px auto 0;
+  width: min(830px, 100%);
+  margin: 118px auto 0;
   text-align: center;
 }
 
@@ -127,7 +131,7 @@ footer {
 }
 
 .logo {
-  width: min(390px, 72vw);
+  width: min(250px, 58vw);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.62));
@@ -155,28 +159,65 @@ footer {
   text-transform: uppercase;
 }
 
-.visually-hidden {
+.hero h1 {
+  position: relative;
+  width: fit-content;
+  margin: 14px auto 0;
+  color: #fff;
+  font-size: clamp(62px, 12vw, 136px);
+  line-height: 0.82;
+  letter-spacing: 0;
+  text-shadow:
+    0 4px 0 rgba(227, 27, 22, 0.52),
+    0 24px 60px rgba(0, 0, 0, 0.82);
+}
+
+.hero h1::after {
+  content: "";
   position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  left: 8%;
+  right: 8%;
+  bottom: -12px;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, var(--red-hot), rgba(244, 234, 215, 0.5), transparent);
+  transform: rotate(-0.5deg);
+  pointer-events: none;
 }
 
 .lead {
-  max-width: 610px;
-  margin: 18px auto 0;
+  max-width: 650px;
+  margin: 32px auto 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.55;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 26px;
 }
 
 .cta {
   display: inline-flex;
-  margin-top: 24px;
+  margin-top: 0;
   padding: 12px 18px;
   border: 0;
   border-bottom: 2px solid var(--red-hot);
+  color: var(--paper);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.ghost-link {
+  display: inline-flex;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(244, 234, 215, 0.36);
   color: var(--paper);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -640,9 +681,17 @@ footer small {
   }
 
   .hero {
-    min-height: 610px;
+    min-height: 620px;
     padding-inline: 12px;
     padding-bottom: 40px;
+  }
+
+  .hero::before {
+    inset: 56px -62px 22px;
+    background:
+      linear-gradient(180deg, rgba(8, 8, 7, 0.2), rgba(8, 8, 7, 0.88)),
+      url("NuovoLogo.png") center 32% / 510px auto no-repeat;
+    opacity: 0.58;
   }
 
   .topbar {
@@ -654,14 +703,22 @@ footer small {
     max-width: 170px;
   }
 
-  .logo {
-    width: min(340px, 94vw);
-    margin-top: 6px;
+  .hero-inner {
+    margin-top: 112px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(58px, 19vw, 84px);
   }
 
   .lead {
     max-width: 330px;
     font-size: 15px;
+  }
+
+  .hero-actions {
+    gap: 16px;
   }
 
   .hero-notes {

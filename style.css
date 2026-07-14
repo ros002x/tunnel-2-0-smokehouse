@@ -865,7 +865,9 @@ footer small {
   .mobile-shortcuts a {
     min-height: 48px;
     display: grid;
+    grid-template-rows: 24px auto;
     place-items: center;
+    gap: 3px;
     color: var(--paper);
     border-bottom: 2px solid rgba(227, 27, 22, 0.72);
     border-radius: 16px 4px 14px 4px;
@@ -879,13 +881,26 @@ footer small {
   }
 
   .mobile-shortcuts svg {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
+  }
+
+  .mobile-shortcuts span {
+    color: rgba(244, 234, 215, 0.78);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .mobile-shortcuts a.is-active span {
+    color: #fff;
   }
 
   .board-section {

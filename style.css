@@ -909,6 +909,11 @@ footer small {
     stroke-linecap: round;
   }
 
+  .mobile-shortcuts .patty-icon .sesame {
+    fill: currentColor;
+    stroke: none;
+  }
+
   .mobile-shortcuts span {
     color: rgba(244, 234, 215, 0.78);
     text-transform: uppercase;

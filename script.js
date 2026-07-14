@@ -51,11 +51,11 @@ const menu = {
     ["Mix verdure grigliate", "Melanzane, zucchine e verdure alla griglia.", "5 EUR"],
   ],
   dolci: [
-    ["Tiramisu", "Classico di fine pasto.", "4 EUR"],
-    ["Cheesecake frutti di bosco", "Fresca e facile dopo BBQ intenso.", "4 EUR"],
-    ["Mousse limone", "Finale leggero.", "4 EUR"],
-    ["Torta Sacher", "Cioccolato, decisa.", "4 EUR"],
-    ["Souffle al cioccolato", "Caldo e goloso.", "4 EUR"],
+    ["Tiramisu", "", "4 EUR"],
+    ["Cheesecake frutti di bosco", "", "4 EUR"],
+    ["Mousse limone", "", "4 EUR"],
+    ["Torta Sacher", "", "4 EUR"],
+    ["Souffle al cioccolato", "", "4 EUR"],
   ],
   beverage: [
     ["Lattina 33cl", "Coca-Cola, Coca-Cola Zero, Fanta, Estathe e altre disponibilita.", "2,50 EUR"],
@@ -196,7 +196,7 @@ function renderList(section) {
       <h3>${name}</h3>
       <span class="dots"></span>
       <strong>${price}</strong>
-      <p>${description}</p>
+      ${description ? `<p>${description}</p>` : ""}
     </article>
   `).join("");
 }

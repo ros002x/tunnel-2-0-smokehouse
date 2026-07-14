@@ -890,6 +890,13 @@ footer small {
     stroke-linejoin: round;
   }
 
+  .mobile-shortcuts .ribs-icon,
+  .mobile-shortcuts .patty-icon {
+    width: 27px;
+    height: 27px;
+    stroke-width: 5;
+  }
+
   .mobile-shortcuts span {
     color: rgba(244, 234, 215, 0.78);
     text-transform: uppercase;

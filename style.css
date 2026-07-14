@@ -890,10 +890,6 @@ footer small {
     stroke-linejoin: round;
   }
 
-  .mobile-shortcuts .meat-icon {
-    transform: translateY(3px);
-  }
-
   .mobile-shortcuts span {
     color: rgba(244, 234, 215, 0.78);
     text-transform: uppercase;

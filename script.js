@@ -57,11 +57,127 @@ const menu = {
     ["Torta Sacher", "Cioccolato, decisa.", "4 EUR"],
     ["Souffle al cioccolato", "Caldo e goloso.", "4 EUR"],
   ],
+  beverage: [
+    ["Lattina 33cl", "Coca-Cola, Coca-Cola Zero, Fanta, Estathe e altre disponibilita.", "2,50 EUR"],
+    ["Lattina 33cl birra artigianale", "Chiedi al bancone le novita disponibili in base ai tuoi gusti.", "6 EUR"],
+    ["Lattina 50cl birra artigianale", "Chiedi al bancone le novita disponibili in base ai tuoi gusti.", "7 / 8 EUR"],
+    ["Krombacher alla spina 0,2", "Birra alla spina Krombacher.", "2,50 EUR"],
+    ["Krombacher alla spina 0,4", "Birra alla spina Krombacher.", "4 EUR"],
+    ["IPA / Rossa / Blanche alla spina 0,2", "Birre speciali alla spina.", "3,50 EUR"],
+    ["IPA / Rossa / Blanche alla spina 0,4", "Birre speciali alla spina.", "6 EUR"],
+  ],
+  vini: [
+    {
+      title: "Bollicine",
+      items: [
+        ["Altacosta", "Metodo classico VSQ, Tenuta San Francesco, Campania. Biancazita 50%, Biancatenera 50%.", "45 EUR"],
+        ["Malbolle", "Metodo classico VDSQ, Podere Il Saliceto, Emilia Romagna. Malbo Gentile 100%.", "35 EUR"],
+        ["Ringadora", "Metodo classico, Podere Il Saliceto, Emilia Romagna. Lambrusco Sorbara 100%.", "40 EUR"],
+        ["Alta Langa Spumante Extra Brut", "Ettore Germano, Piemonte.", "48 EUR"],
+        ["Trentodoc", "Tonini, Trentino Alto Adige.", "50 EUR"],
+      ],
+    },
+    {
+      title: "Champagne",
+      items: [
+        ["Brut Millesime Premier Cru 2017", "Francois Lecompte, Francia. Chardonnay 40%, Pinot Noir 30%, Pinot Meunier 30%.", "60 EUR"],
+        ["Extra Brut Millesime 2017", "Francois Lecompte, Francia. Chardonnay 40%, Pinot Noir 30%, Pinot Meunier 30%.", "65 EUR"],
+        ["Nature Millesime 2017", "Francois Lecompte, Francia. Chardonnay 40%, Pinot Noir 30%, Pinot Meunier 30%.", "70 EUR"],
+        ["Brut Rose", "Francois Lecompte, Francia. Pinot Meunier 30%, Chardonnay 40%, Pinot Noir 30%.", "70 EUR"],
+      ],
+    },
+    {
+      title: "Vini bianchi",
+      items: [
+        ["Terra Aspra Greco 2019", "Tenuta Marino, Basilicata.", "16 EUR"],
+        ["Terra Aspra Aglianico 2019", "Vinificato in bianco, Tenuta Marino, Basilicata.", "16 EUR"],
+        ["Terre Rosse di Gabbiascio", "Centopassi, Sicilia. Catarratto 100%.", "29 EUR"],
+        ["Leuconoe", "Cantina Madonna delle Grazie, Basilicata. Aglianico del Vulture 100%.", "18 EUR"],
+        ["Schwarzhaus", "Strobhof, Alto Adige. Chardonnay 100%.", "35 EUR"],
+        ["Nico", "Strobhof, Alto Adige. Sauvignon 100%.", "39 EUR"],
+        ["Valle Isarco Kerner", "Taschlerhof, Alto Adige. Kerner 100%.", "36 EUR"],
+        ["Segreto di Bianca", "Masseria Cuturi, Puglia. Fiano 100%.", "24 EUR"],
+        ["Costa d'Amalfi Tramonti Bianco DOC", "Tenuta San Francesco, Campania. Falanghina 40%, Bianconela 40%, Pepella 20%.", "27 EUR"],
+      ],
+    },
+    {
+      title: "Vini rosati",
+      items: [
+        ["Terra Aspra Primitivo 2021", "Tenuta Marino, Basilicata.", "16 EUR"],
+        ["Tuttovaben", "Centopassi, Sicilia. Nocera 90%, Lucignola 10%.", "19 EUR"],
+        ["DOC Ciro Rosato", "L'Arciglione, Calabria. Gaglioppo 100%.", "24 EUR"],
+        ["Costa d'Amalfi Rosato DOC", "Tenuta San Francesco, Campania. Tintore 80%, Aglianico 10%, Piedirosso 10%.", "29 EUR"],
+        ["Garage Mandrolisai DOC", "I Garagisti Sorgono, Sardegna. Monica 30%, Cannonau 30%, Murtiseddu 40%.", "29 EUR"],
+        ["Rosato IGT Toscana", "Tenuta di Carleone. Sangiovese 100%.", "27 EUR"],
+        ["Sagaris", "Cantina Madonna delle Grazie, Basilicata. Aglianico del Vulture 100%.", "18 EUR"],
+      ],
+    },
+    {
+      title: "Vini rossi",
+      items: [
+        ["Terra Aspra Syrah 2023", "Tenuta Marino, Basilicata.", "16 EUR"],
+        ["Terra Aspra Merlot 2015", "Tenuta Marino, Basilicata.", "24 EUR"],
+        ["Terra Aspra Primitivo 2013", "Tenuta Marino, Basilicata.", "28 EUR"],
+        ["Terra Aspra Aglianico 2013", "Tenuta Marino, Basilicata.", "24 EUR"],
+        ["Cimento di Perricone", "Centopassi, Sicilia. Perricone 100%.", "28 EUR"],
+        ["Ciro Rosso Classico Superiore DOC", "L'Arciglione, Calabria. Gaglioppo 100%.", "28 EUR"],
+        ["Castiello", "Perillo, Campania. Aglianico coda di cavallo 100%.", "33 EUR"],
+        ["Costa d'Amalfi Tramonti Rosso DOC", "Tenuta San Francesco, Campania. Tintore 50%, Aglianico 30%, Piedirosso 20%.", "30 EUR"],
+        ["Garage Rosso Mandrolisai DOC", "I Garagisti di Sorgono, Sardegna. Muristeddu 40%, Cannonau 30%, Monica 30%.", "29 EUR"],
+        ["Parisi Bovale IGT Isola dei Nuraghi", "I Garagisti di Sorgono, Sardegna. Muristeddu 100%.", "33 EUR"],
+        ["Il Randagio IGT Toscana", "Tenuta di Carleone, Toscana. Cabernet Franc 50%, Merlot 50%.", "31 EUR"],
+        ["Iuli IGP Toscana", "Sangiovese Grosso 100%.", "21 EUR"],
+        ["Rosso di Montalcino DOC", "Castello Tricerchi, Toscana. Sangiovese Grosso 100%.", "35 EUR"],
+        ["Ciliegiolo Toscana IGT Antonio Camillo", "Antonio Camillo, Toscana. Ciliegiolo 100%.", "27 EUR"],
+        ["Bolgheri Rosso DOC", "Le Macchiole, Toscana. Merlot, Cabernet Franc, Cabernet Sauvignon, Syrah e Sangiovese.", "40 EUR"],
+        ["I Luoghi Rosso Bolgheri DOC", "I Luoghi, Toscana. Cabernet Sauvignon 100%.", "34 EUR"],
+        ["Poderi Ritorti Bolgheri Superiore DOC", "I Luoghi, Toscana. Cabernet Sauvignon 80%, Cabernet Franc 15%, Merlot e Syrah 5%.", "44 EUR"],
+        ["Canaiolo Toscana IGT", "Ascione Alongi, Toscana. Canaiolo 100%.", "27 EUR"],
+        ["Emilia Rosso IGP Malbo", "Podere Il Saliceto, Emilia Romagna. Malbo Gentile 100%.", "25 EUR"],
+        ["Barolo Serralunga", "Ettore Germano, Piemonte. Nebbiolo 100%.", "59 EUR"],
+        ["Valpolicella Classica Superiore Ripasso", "Antolini, Veneto. Corvina 35%, Corvinone 35%, Rondinella 25%, Molinara 5%.", "27 EUR"],
+        ["Amarone della Valpolicella Classico Moropio", "Antolini, Veneto. Corvina 35%, Corvinone 35%, Rondinella 25%, Molinara 5%.", "55 EUR"],
+      ],
+    },
+    {
+      title: "Vini rossi Francia",
+      items: [
+        ["Bourgogne Pinot Noir", "Domaine Chicotot, Borgogna. Pinot Noir 100%.", "53 EUR"],
+        ["Cote de Nuits Villages Vignes", "Jean Marc Millot, Borgogna. Pinot Noir 100%.", "75 EUR"],
+        ["Bourgogne Rouge Vieilles Vignes", "Domaine Joseph Voillot, Borgogna. Pinot Noir 100%.", "50 EUR"],
+        ["F.lli Brunier Le Pigeoulet", "Vieux Telegraphe, Rodano. Grenache 80%, Syrah 10%, Carignan 5%, Cinsault 5%.", "34 EUR"],
+        ["Crozes-Hermitage Rouge", "Yann Chave, Rodano Nord. Syrah 100%.", "49 EUR"],
+        ["Clos de Gamot Cahors", "Clos de Gamot, Cahors. Malbec 100%.", "30 EUR"],
+        ["Les Ormeaux Castillon Cotes de Bordeaux", "Clos Puy Arnaud, Bordeaux. Merlot 75%, Cabernet Franc 25%.", "40 EUR"],
+        ["Saumur-Champigny Coup d'Ouze", "Le P'tit Domaine, Saumurois. Cabernet Franc 100%.", "35 EUR"],
+        ["Pinot Noir Hugel", "Alsazia. Pinot Noir 100%.", "34 EUR"],
+      ],
+    },
+  ],
 };
 
 function renderList(section) {
   const node = document.querySelector(`#${section}-list`);
   if (!node) return;
+
+  if (section === "vini") {
+    node.innerHTML = menu[section].map((group) => `
+      <div class="wine-group">
+        <h3>${group.title}</h3>
+        <div class="menu-list wine-items">
+          ${group.items.map(([name, description, price]) => `
+            <article class="menu-item reveal">
+              <h3>${name}</h3>
+              <span class="dots"></span>
+              <strong>${price}</strong>
+              <p>${description}</p>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    `).join("");
+    return;
+  }
 
   if (section === "evidenza") {
     node.innerHTML = menu[section].map(([name, description, price]) => `
@@ -92,7 +208,7 @@ const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
 
 function getScrollOffset(target) {
   if (target.id === "menu") return 12;
-  return window.matchMedia("(max-width: 760px)").matches ? 116 : 92;
+  return window.matchMedia("(max-width: 760px)").matches ? 74 : 92;
 }
 
 scrollLinks.forEach((link) => {

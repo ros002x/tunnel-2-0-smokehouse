@@ -901,8 +901,7 @@ footer small {
     height: 30px;
     display: block;
     object-fit: contain;
-    filter: invert(1) contrast(1.15);
-    mix-blend-mode: screen;
+    filter: invert(1) contrast(1.08);
   }
 
   .mobile-shortcuts .burger-img {

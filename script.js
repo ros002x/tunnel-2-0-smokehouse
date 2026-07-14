@@ -1,7 +1,7 @@
 const menu = {
   evidenza: [
-    ["Brisket Masurya", "Punta di petto di scottona affumicata con quercia. Il piatto che fa capire la smokehouse.", "15 EUR"],
-    ["Bacon Crispy 2.0", "Wagyu, cheddar, bacon croccante e salsa crispy. Burger firma da mettere in evidenza.", "15 EUR"],
+    ["Brisket Masurya", "Punta di petto di scottona Masurya affumicata con legno di quercia.", "15 EUR"],
+    ["Bacon Crispy 2.0", "Wagyu, cheddar, bacon croccante e salsa crispy.", "15 EUR"],
     ["Missouri", "Mix per 3-4 persone: brisket, ribs, salsicce, ali BBQ, pulled pork, chili e patatine.", "65 EUR"],
   ],
   bbq: [
@@ -14,8 +14,8 @@ const menu = {
   ],
   frollatore: [
     ["Selezione carni", "Rubia Gallega, Minhota Portoghese, Chianina IGP, Angus, Masurya e Wagyu A5.", "al peso"],
-    ["Costate", "Taglio importante da scegliere al banco con peso e cottura consigliata.", "al peso"],
-    ["Fiorentine", "Scelta scenica, pensata per chi vuole vivere il frollatore.", "al peso"],
+    ["Costate", "", "al peso"],
+    ["Fiorentine", "", "al peso"],
   ],
   mix: [
     ["Kentucky", "Per 2: baby back ribs, stick pollo fritto, pulled pork, ali BBQ, chili con carne, patatine.", "40 EUR"],
@@ -36,17 +36,17 @@ const menu = {
   antipasti: [
     ["Tartare", "Acciughe del Cantabrico, capperi di Pantelleria, senape, cetriolini e cipolla rossa.", "9 EUR"],
     ["Carpaccio", "Carpaccio con citronette.", "8 EUR"],
-    ["Polpette al sugo", "Classico caldo, semplice e diretto.", "6 EUR"],
+    ["Polpette al sugo", "", "6 EUR"],
     ["Baltimore Pit Beef", "Salsa tonnata e fior di cappero.", "8 EUR"],
     ["Picanha stagionata", "Picanha stagionata con nocciole tostate.", "10 EUR"],
   ],
   sides: [
     ["Patatine", "Small, medium o large.", "3 / 5 / 8 EUR"],
-    ["Patatine cheddar & bacon", "Side ricco con cheddar e bacon, ideale con burger e ribs.", "7 EUR"],
-    ["Patatine pulled pork", "Patatine cariche con pulled pork.", "7 EUR"],
-    ["Peperoni cruschi", "Small, medium o large. Il dettaglio lucano da tenere visibile.", "3 / 6 / 10 EUR"],
-    ["Coleslaw", "Insalata BBQ ideale con pulled pork e ribs.", "5 EUR"],
-    ["Cicoria campestre", "Contorno amaro e territoriale.", "4 EUR"],
+    ["Patatine cheddar & bacon", "Cheddar e bacon.", "7 EUR"],
+    ["Patatine pulled pork", "Pulled pork.", "7 EUR"],
+    ["Peperoni cruschi", "Small, medium o large.", "3 / 6 / 10 EUR"],
+    ["Coleslaw", "", "5 EUR"],
+    ["Cicoria campestre", "", "4 EUR"],
     ["Verdure pastellate", "Fritto vegetale.", "5 EUR"],
     ["Mix verdure grigliate", "Melanzane, zucchine e verdure alla griglia.", "5 EUR"],
   ],
@@ -59,8 +59,8 @@ const menu = {
   ],
   beverage: [
     ["Lattina 33cl", "Coca-Cola, Coca-Cola Zero, Fanta, Estathe e altre disponibilita.", "2,50 EUR"],
-    ["Lattina 33cl birra artigianale", "Chiedi al bancone le novita disponibili in base ai tuoi gusti.", "6 EUR"],
-    ["Lattina 50cl birra artigianale", "Chiedi al bancone le novita disponibili in base ai tuoi gusti.", "7 / 8 EUR"],
+    ["Lattina 33cl birra artigianale", "", "6 EUR"],
+    ["Lattina 50cl birra artigianale", "", "7 / 8 EUR"],
     ["Krombacher alla spina 0,2", "Birra alla spina Krombacher.", "2,50 EUR"],
     ["Krombacher alla spina 0,4", "Birra alla spina Krombacher.", "4 EUR"],
     ["IPA / Rossa / Blanche alla spina 0,2", "Birre speciali alla spina.", "3,50 EUR"],

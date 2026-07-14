@@ -619,6 +619,10 @@ main {
   font-weight: 900;
 }
 
+.mobile-shortcuts {
+  display: none;
+}
+
 footer {
   margin-bottom: 24px;
   padding: 38px 20px 28px;
@@ -705,6 +709,7 @@ footer small {
 
   main {
     display: block;
+    padding-bottom: 118px;
   }
 
   .hero {
@@ -830,6 +835,57 @@ footer small {
   .category-nav a.is-active {
     border-bottom-color: var(--paper);
     transform: none;
+  }
+
+  .back-to-index {
+    display: none;
+  }
+
+  .mobile-shortcuts {
+    position: fixed;
+    left: 50%;
+    bottom: 14px;
+    z-index: 80;
+    width: min(330px, calc(100% - 34px));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 9px;
+    background:
+      linear-gradient(180deg, rgba(18, 15, 13, 0.96), rgba(8, 8, 7, 0.94)),
+      var(--bg);
+    border-top: 1px solid rgba(244, 234, 215, 0.16);
+    border-bottom: 2px solid rgba(227, 27, 22, 0.48);
+    border-radius: 22px 7px 20px 7px;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+    transform: translateX(-50%);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-shortcuts a {
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+    color: var(--paper);
+    border-bottom: 2px solid rgba(227, 27, 22, 0.72);
+    border-radius: 16px 4px 14px 4px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .mobile-shortcuts a.is-active {
+    color: #fff;
+    border-bottom-color: var(--paper);
+    background: rgba(227, 27, 22, 0.14);
+  }
+
+  .mobile-shortcuts svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .board-section {

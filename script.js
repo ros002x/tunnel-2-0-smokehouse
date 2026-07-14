@@ -203,7 +203,7 @@ function renderList(section) {
 
 Object.keys(menu).forEach(renderList);
 
-const categoryLinks = [...document.querySelectorAll(".category-nav a")];
+const sectionLinks = [...document.querySelectorAll(".category-nav a, .mobile-shortcuts a")];
 const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
 
 function getScrollOffset(target) {
@@ -253,7 +253,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
   if (!visible) return;
 
-  categoryLinks.forEach((link) => {
+  sectionLinks.forEach((link) => {
     link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
   });
 }, {

@@ -712,20 +712,20 @@ footer small {
   }
 
   .hero {
-    min-height: 610px;
+    min-height: 600px;
     padding-inline: 12px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   .hero::before {
-    top: 50px;
+    top: 70px;
     left: 50%;
     right: auto;
     bottom: auto;
-    width: 520px;
-    height: 520px;
+    width: min(430px, 132vw);
+    height: min(430px, 132vw);
     background: url("assets/tunnel-logo-cutout.png") center / contain no-repeat;
-    opacity: 0.48;
+    opacity: 0.62;
     transform: translateX(-50%);
     mix-blend-mode: screen;
     -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 35%, rgba(0, 0, 0, 0.55) 55%, transparent 74%);
@@ -748,30 +748,24 @@ footer small {
 
   .hero-inner {
     width: 100%;
-    margin-top: 128px;
+    margin-top: 510px;
     text-align: center;
   }
 
-  .hero h1 {
-    max-width: 100%;
-    margin-inline: auto;
-    font-size: clamp(56px, 18vw, 82px);
-  }
-
+  .hero h1,
   .hero h1::after {
-    left: 10%;
-    right: 10%;
+    display: none;
   }
 
+  .eyebrow,
   .lead {
-    max-width: 330px;
-    margin-inline: auto;
-    font-size: 15px;
+    display: none;
   }
 
   .hero-actions {
     justify-content: center;
     gap: 16px;
+    margin-top: 0;
   }
 
   .hero-notes {

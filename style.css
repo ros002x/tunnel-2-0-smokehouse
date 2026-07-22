@@ -1087,3 +1087,110 @@ footer small {
     display: none;
   }
 }
+
+@media (max-width: 760px) {
+  .board-section.highlight {
+    padding-top: 34px;
+  }
+
+  .board-section.highlight .section-heading {
+    margin-bottom: 16px;
+  }
+
+  .board-section.highlight .section-heading h2 {
+    font-size: 40px;
+  }
+
+  .board-section.highlight .section-heading span {
+    max-width: 260px;
+    color: rgba(244, 234, 215, 0.72);
+  }
+
+  .signature {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 18px;
+    padding: 18px 14px 16px;
+    background:
+      linear-gradient(110deg, rgba(227, 27, 22, 0.2), transparent 46%),
+      linear-gradient(180deg, rgba(244, 234, 215, 0.055), rgba(244, 234, 215, 0.018));
+    border-top: 1px solid rgba(244, 234, 215, 0.16);
+    border-right: 1px solid rgba(244, 234, 215, 0.08);
+    border-bottom: 3px solid var(--red-hot);
+    border-left: 4px solid var(--red-hot);
+    border-radius: 22px 6px 18px 4px;
+  }
+
+  .signature span {
+    grid-column: 1 / -1;
+    width: fit-content;
+  }
+
+  .signature h3 {
+    max-width: 210px;
+    font-size: 42px;
+    line-height: 0.84;
+  }
+
+  .signature p {
+    grid-column: 1 / -1;
+    max-width: 290px;
+    font-size: 13px;
+    line-height: 1.38;
+  }
+
+  .signature strong {
+    min-width: 72px;
+    padding: 8px 0 4px;
+    color: #fff;
+    border-top: 2px solid rgba(244, 234, 215, 0.4);
+    font-size: 21px;
+    text-align: right;
+  }
+
+  .push-grid {
+    gap: 10px;
+  }
+
+  .push-grid::before {
+    content: "Da provare";
+    display: block;
+    margin: 4px 0 2px;
+    color: var(--red-hot);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 9px;
+    font-weight: 900;
+  }
+
+  .push-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 13px 12px 12px;
+    background: rgba(255, 255, 255, 0.028);
+    border-top: 1px solid rgba(244, 234, 215, 0.1);
+    border-bottom: 2px solid rgba(227, 27, 22, 0.62);
+    border-left: 2px solid rgba(227, 27, 22, 0.7);
+    border-radius: 16px 5px 14px 3px;
+  }
+
+  .push-card span {
+    padding: 4px 7px;
+    font-size: 7px;
+  }
+
+  .push-card h3 {
+    font-size: 18px;
+  }
+
+  .push-card p {
+    max-width: 255px;
+    font-size: 12px;
+  }
+
+  .push-card strong {
+    color: #fff;
+    border-bottom: 2px solid var(--red-hot);
+    font-size: 18px;
+  }
+}

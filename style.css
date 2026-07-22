@@ -1278,3 +1278,68 @@ footer small {
     scroll-margin-top: 18px;
   }
 }
+
+/* Mobile scroll stability reset */
+@media (max-width: 760px) {
+  html {
+    scroll-behavior: auto;
+    overflow-x: clip;
+    overscroll-behavior-y: auto;
+  }
+
+  body {
+    overflow-x: clip;
+    overscroll-behavior-y: auto;
+    touch-action: pan-y;
+  }
+
+  main,
+  .hero,
+  .board-section,
+  .section-heading,
+  .signature,
+  .push-grid,
+  .push-card,
+  .menu-list,
+  .menu-item,
+  .practical,
+  footer {
+    touch-action: pan-y;
+  }
+
+  .reveal,
+  .reveal.is-visible,
+  .menu-item.reveal,
+  .menu-item.reveal:nth-child(even),
+  .menu-item.reveal:nth-child(even).is-visible,
+  .push-card.reveal,
+  .push-card.reveal.is-visible,
+  .board-section.reveal,
+  .board-section.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .mobile-shortcuts {
+    touch-action: manipulation;
+  }
+
+  .mobile-shortcuts a {
+    touch-action: manipulation;
+  }
+}
+
+/* Mobile rendering stability: avoid fixed repaint layers while scrolling */
+@media (max-width: 760px) {
+  body::before {
+    display: none;
+  }
+
+  .mobile-shortcuts {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.42);
+  }
+}

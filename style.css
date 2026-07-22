@@ -1240,3 +1240,31 @@ footer small {
     white-space: nowrap;
   }
 }
+
+/* Booking phone icon */
+.ghost-link {
+  align-items: center;
+  gap: 8px;
+}
+
+.ghost-link svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .ghost-link {
+    gap: 7px;
+  }
+
+  .ghost-link svg {
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -207,8 +207,16 @@ const sectionLinks = [...document.querySelectorAll(".category-nav a, .mobile-sho
 const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
 
 function getScrollOffset(target) {
-  if (target.id === "menu") return 12;
-  return window.matchMedia("(max-width: 760px)").matches ? 74 : 92;
+  const isMobile = window.matchMedia("(max-width: 760px)").matches;
+  if (target.id === "menu") return isMobile ? 8 : 12;
+
+  if (isMobile) {
+    const nav = document.querySelector(".category-nav");
+    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    return navHeight + 14;
+  }
+
+  return 92;
 }
 
 scrollLinks.forEach((link) => {
@@ -217,7 +225,7 @@ scrollLinks.forEach((link) => {
     if (!target) return;
 
     event.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset(target);
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - getScrollOffset(target));
     window.scrollTo({ top, behavior: "smooth" });
   });
 });

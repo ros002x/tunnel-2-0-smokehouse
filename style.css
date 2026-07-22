@@ -1268,3 +1268,20 @@ footer small {
     height: 14px;
   }
 }
+
+/* Mobile category nav must not trap vertical scrolling */
+@media (max-width: 760px) {
+  .category-nav {
+    flex-wrap: wrap;
+    overflow: visible;
+    overscroll-behavior: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .category-nav a {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}

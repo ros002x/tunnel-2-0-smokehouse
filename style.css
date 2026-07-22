@@ -1343,3 +1343,17 @@ footer small {
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.42);
   }
 }
+
+/* Keep footer readable on mobile */
+@media (max-width: 760px) {
+  footer {
+    padding-bottom: calc(118px + env(safe-area-inset-bottom));
+  }
+
+  body.is-footer-visible .mobile-shortcuts {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 18px);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+}

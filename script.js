@@ -265,3 +265,14 @@ if (!isMobileViewport()) {
 
   document.querySelectorAll(".board-section").forEach((section) => sectionObserver.observe(section));
 }
+const footer = document.querySelector("footer");
+if (footer && isMobileViewport()) {
+  const footerObserver = new IntersectionObserver((entries) => {
+    document.body.classList.toggle("is-footer-visible", entries.some((entry) => entry.isIntersecting));
+  }, {
+    threshold: 0.08,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
+  footerObserver.observe(footer);
+}

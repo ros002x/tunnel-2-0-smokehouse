@@ -1356,3 +1356,32 @@ footer small {
     white-space: nowrap;
   }
 }
+@media (max-width: 760px) {
+  html {
+    scroll-behavior: auto;
+    overscroll-behavior-x: none;
+  }
+
+  body {
+    min-height: 100%;
+    overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-nav {
+    touch-action: pan-x pan-y;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-nav a,
+  .mobile-shortcuts a,
+  .cta,
+  .ghost-link {
+    touch-action: manipulation;
+  }
+
+  .board-section {
+    scroll-margin-top: 86px;
+  }
+}

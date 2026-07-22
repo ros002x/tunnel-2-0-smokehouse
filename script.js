@@ -226,7 +226,7 @@ scrollLinks.forEach((link) => {
 
     event.preventDefault();
     const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - getScrollOffset(target));
-    window.scrollTo({ top, behavior: "smooth" });
+    window.scrollTo({ top, behavior: window.matchMedia("(max-width: 760px)").matches ? "auto" : "smooth" });
   });
 });
 

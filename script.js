@@ -2,7 +2,6 @@ const menu = {
   evidenza: [
     ["Brisket Masurya", "Punta di petto di scottona Masurya affumicata con legno di quercia.", "15 EUR"],
     ["Bacon Crispy 2.0", "Wagyu, cheddar, bacon croccante e salsa crispy.", "15 EUR"],
-    ["Missouri", "Mix per 3-4 persone: brisket, ribs, salsicce, ali BBQ, pulled pork, chili e patatine.", "65 EUR"],
   ],
   bbq: [
     ["Brisket Masurya", "Punta di petto di scottona Masurya affumicata lentamente con legno di quercia.", "15 EUR"],

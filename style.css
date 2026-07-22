@@ -1194,3 +1194,112 @@ footer small {
     font-size: 18px;
   }
 }
+@media (max-width: 760px) {
+  .board-section.highlight {
+    padding-top: 28px;
+  }
+
+  .board-section.highlight .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .signature {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 14px;
+    align-items: end;
+    margin: 0 0 18px;
+    padding: 18px 0 16px;
+    background: transparent;
+    border-top: 1px solid rgba(244, 234, 215, 0.18);
+    border-right: 0;
+    border-bottom: 1px solid rgba(244, 234, 215, 0.18);
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .signature span {
+    grid-column: 1 / -1;
+    padding: 0;
+    background: transparent;
+    color: var(--red-hot);
+    letter-spacing: 0.16em;
+  }
+
+  .signature h3 {
+    max-width: 210px;
+    margin-top: 4px;
+    font-size: 44px;
+    line-height: 0.82;
+  }
+
+  .signature p {
+    grid-column: 1 / -1;
+    max-width: 292px;
+    margin-top: 0;
+    color: rgba(244, 234, 215, 0.72);
+  }
+
+  .signature strong {
+    min-width: 70px;
+    padding: 7px 0 3px;
+    color: #fff;
+    border-top: 2px solid var(--red-hot);
+    border-bottom: 0;
+    font-size: 22px;
+    text-align: right;
+  }
+
+  .push-grid {
+    gap: 0;
+  }
+
+  .push-grid::before {
+    margin: 2px 0 6px;
+  }
+
+  .push-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 5px 12px;
+    margin: 0;
+    padding: 13px 0 14px;
+    background: transparent;
+    border-top: 1px solid rgba(244, 234, 215, 0.12);
+    border-right: 0;
+    border-bottom: 1px solid rgba(227, 27, 22, 0.48);
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .push-card span {
+    grid-column: 1 / -1;
+    padding: 0;
+    background: transparent;
+    color: var(--red-hot);
+    font-size: 7px;
+    letter-spacing: 0.15em;
+  }
+
+  .push-card h3 {
+    margin: 0;
+    color: var(--paper);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .push-card p {
+    grid-column: 1 / -1;
+    max-width: 270px;
+    color: rgba(244, 234, 215, 0.66);
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .push-card strong {
+    align-self: end;
+    padding: 3px 0 2px;
+    color: #fff;
+    border-bottom: 2px solid var(--red-hot);
+    font-size: 17px;
+    line-height: 1;
+  }
+}

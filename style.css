@@ -1268,20 +1268,13 @@ footer small {
     height: 14px;
   }
 }
-
-/* Mobile category nav must not trap vertical scrolling */
+/* Mobile uses only bottom shortcuts: no sticky category bar, no trapped scroll */
 @media (max-width: 760px) {
   .category-nav {
-    flex-wrap: wrap;
-    overflow: visible;
-    overscroll-behavior: auto;
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: auto;
+    display: none;
   }
 
-  .category-nav a {
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
+  .board-section {
+    scroll-margin-top: 18px;
   }
 }

@@ -208,42 +208,13 @@ const scrollLinks = [...document.querySelectorAll('a[href^="#"]')];
 function getScrollOffset(target) {
   const isMobile = window.matchMedia("(max-width: 760px)").matches;
   if (target.id === "menu") return isMobile ? 8 : 12;
-
-  if (isMobile) {
-    const nav = document.querySelector(".category-nav");
-    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
-    return navHeight + 14;
-  }
-
-  return 92;
+  return isMobile ? 18 : 92;
 }
 
 scrollLinks.forEach((link) => {
-  let startX = 0;
-  let startY = 0;
-  let didDrag = false;
-
-  link.addEventListener("pointerdown", (event) => {
-    startX = event.clientX;
-    startY = event.clientY;
-    didDrag = false;
-  }, { passive: true });
-
-  link.addEventListener("pointermove", (event) => {
-    if (Math.abs(event.clientY - startY) > 8 && Math.abs(event.clientY - startY) > Math.abs(event.clientX - startX)) {
-      didDrag = true;
-    }
-  }, { passive: true });
-
   link.addEventListener("click", (event) => {
     const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
-
-    if (didDrag) {
-      event.preventDefault();
-      didDrag = false;
-      return;
-    }
 
     event.preventDefault();
     const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - getScrollOffset(target));

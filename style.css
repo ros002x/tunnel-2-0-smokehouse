@@ -1357,3 +1357,68 @@ footer small {
     transition: opacity 180ms ease, transform 180ms ease;
   }
 }
+
+.footer-collab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 6vw, 72px);
+  margin: 0 auto 22px;
+}
+
+.footer-collab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.footer-collab a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.footer-collab a:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 8px;
+}
+
+.footer-collab .tunnel-footer-logo {
+  width: clamp(118px, 16vw, 154px);
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-collab .ros-signature {
+  width: clamp(122px, 17vw, 166px);
+  height: auto;
+  object-fit: contain;
+  opacity: 0.92;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.34));
+}
+
+.collab-mark {
+  color: var(--paper);
+  font: 700 22px/1 Arial, Helvetica, sans-serif;
+  opacity: 0.92;
+  transform: translateY(2px);
+}
+
+@media (max-width: 520px) {
+  .footer-collab {
+    gap: 22px;
+    margin-bottom: 18px;
+  }
+
+  .footer-collab .tunnel-footer-logo {
+    width: 112px;
+  }
+
+  .footer-collab .ros-signature {
+    width: 118px;
+  }
+
+  .collab-mark {
+    font-size: 18px;
+  }
+}
